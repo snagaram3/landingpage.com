@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strata — You ship, we scale.</title>
+  <meta name="description" content="Strata scans your project, provisions the managed infrastructure it needs, and load-tests it — all inside your own cloud account. You ship, we scale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="logo">Strata</a>
+      <nav aria-label="Primary">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#model">How we work</a>
+      </nav>
+      <a href="#signup" class="btn btn-primary btn-sm">Get early access</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow eyebrow-on-dark reveal">Internal Developer Platform</p>
+        <h1 class="reveal">You ship.<br><span class="accent-text">We scale.</span></h1>
+        <p class="lead reveal">
+          Strata scans your project, provisions the managed infrastructure it needs, and load-tests the
+          result &mdash; so everything you ship scales <span class="highlight-chip">with resilience</span>,
+          inside your own cloud.
+        </p>
+        <form class="hero-signup reveal" id="hero-signup-form" novalidate>
+          <label class="sr-only" for="hero-email">Work email</label>
+          <input type="email" id="hero-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary">Get early access</button>
+        </form>
+        <p class="fine-print reveal">No credit card. No cloud migration. You keep your cloud &mdash; we prove it scales.</p>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <p class="eyebrow reveal">The problem</p>
+        <h2 class="reveal">Scaling infrastructure shouldn&rsquo;t be a guessing game</h2>
+
+        <ol class="index-list">
+          <li class="index-item reveal">
+            <span class="index-num" aria-hidden="true">01</span>
+            <div class="index-body">
+              <h3>Provisioning is manual and slow</h3>
+              <p>Every new managed service &mdash; databases, queues, caches &mdash; means another ticket, another runbook, another week of waiting.</p>
+            </div>
+          </li>
+          <li class="index-item reveal">
+            <span class="index-num" aria-hidden="true">02</span>
+            <div class="index-body">
+              <h3>You find out too late</h3>
+              <p>Most teams discover their infrastructure can&rsquo;t scale during an incident &mdash; not before one.</p>
+            </div>
+          </li>
+          <li class="index-item reveal">
+            <span class="index-num" aria-hidden="true">03</span>
+            <div class="index-body">
+              <h3>Every team rebuilds the same plumbing</h3>
+              <p>Terraform modules, scaling policies, load tests &mdash; reinvented project after project, team after team.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="solution">
+      <div class="container">
+        <p class="eyebrow reveal">The solution</p>
+        <h2 class="reveal">One platform. Your cloud. Proven resilience.</h2>
+        <p class="section-lead reveal">
+          Strata is the Internal Developer Platform that scans your codebase, identifies the managed
+          infrastructure it needs, provisions it directly inside your own cloud account, and load-tests
+          the result &mdash; so you know your platform can scale <span class="highlight-chip">with resilience</span>,
+          before it has to. You ship the product. We scale the infrastructure underneath it.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <p class="eyebrow reveal">How it works</p>
+        <h2 class="reveal">From sign up to proven scale</h2>
+        <ol class="flow">
+          <li class="flow-step reveal">
+            <span class="flow-num" aria-hidden="true">01</span>
+            <div class="flow-body">
+              <h3>Sign up</h3>
+              <p>Connect your project and your cloud account. Nothing leaves your cloud.</p>
+            </div>
+          </li>
+          <li class="flow-step reveal">
+            <span class="flow-num" aria-hidden="true">02</span>
+            <div class="flow-body">
+              <h3>Scan the project</h3>
+              <p>Strata analyzes your codebase and existing infrastructure to understand what you&rsquo;re running.</p>
+            </div>
+          </li>
+          <li class="flow-step reveal">
+            <span class="flow-num" aria-hidden="true">03</span>
+            <div class="flow-body">
+              <h3>Identify managed infra</h3>
+              <p>We detect the managed components you need &mdash; databases, queues, caches, networking, CDN &mdash; and what to provision.</p>
+            </div>
+          </li>
+          <li class="flow-step reveal">
+            <span class="flow-num" aria-hidden="true">04</span>
+            <div class="flow-body">
+              <h3>Provision</h3>
+              <p>Those components are provisioned automatically, directly inside your own cloud account.</p>
+            </div>
+          </li>
+          <li class="flow-step reveal">
+            <span class="flow-num" aria-hidden="true">05</span>
+            <div class="flow-body">
+              <h3>Load test &amp; scale</h3>
+              <p>We simulate real traffic against your infrastructure and prove it scales with resilience &mdash; before launch.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="model">
+      <div class="container">
+        <p class="eyebrow reveal">How we work together</p>
+        <h2 class="reveal">You keep your cloud. We run the control plane.</h2>
+        <p class="section-lead reveal">
+          Strata never takes over your cloud account. Your infrastructure runs entirely inside AWS, GCP,
+          or Azure &mdash; under your billing, your compliance boundary, your control. What we own is the
+          control plane: the provisioning engine, the state files, and the scaling policies that keep it resilient.
+        </p>
+
+        <div class="model-diagram reveal">
+          <div class="model-box">
+            <p class="model-label">Yours</p>
+            <h3>Your cloud</h3>
+            <ul>
+              <li>Compute, storage &amp; network</li>
+              <li>Billed directly by your provider</li>
+              <li>Stays inside your account &amp; compliance boundary</li>
+            </ul>
+          </div>
+
+          <div class="model-arrow" role="img" aria-label="Strata provisions and orchestrates infrastructure inside your cloud">
+            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="10" y1="20" x2="100" y2="20" stroke="currentColor" stroke-width="1.5"></line>
+              <polyline points="88,10 100,20 88,30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+              <polyline points="32,10 20,20 32,30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            </svg>
+            <span>provisions &amp; orchestrates</span>
+          </div>
+
+          <div class="model-box model-box-accent">
+            <p class="model-label">Ours</p>
+            <h3>Strata control plane</h3>
+            <ul>
+              <li>Provisioning engine</li>
+              <li>Terraform / OpenTofu state files</li>
+              <li>Scaling policies &amp; load-test engine</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="model-note reveal">
+          You pay your cloud provider directly for what you use. You pay Strata a platform fee to own,
+          orchestrate, and continuously prove the resilience of it.
+        </p>
+      </div>
+    </section>
+
+    <section class="section signup-section" id="signup">
+      <div class="container signup-inner">
+        <h2 class="reveal">Ready to ship?</h2>
+        <p class="reveal">Request early access &mdash; we&rsquo;ll onboard your team, scan your first project, and start scaling it with you.</p>
+
+        <form id="signup-form" class="signup-form reveal" novalidate>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization" required>
+          </div>
+          <div class="form-row">
+            <label for="cloud">Cloud provider</label>
+            <select id="cloud" name="cloud">
+              <option value="aws">AWS</option>
+              <option value="gcp">Google Cloud</option>
+              <option value="azure">Azure</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Request early access</button>
+        </form>
+        <p id="signup-success" class="signup-success" role="status" hidden>
+          Thanks &mdash; we&rsquo;ll be in touch shortly.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="logo">Strata</span>
+      <p>&copy; 2026 Strata &mdash; You ship, we scale.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
