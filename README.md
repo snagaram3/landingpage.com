@@ -43,7 +43,7 @@ python3 -m http.server 8000
 
 ## Notes
 
-- The sign-up forms validate client-side but aren't wired to a backend yet —
-  `js/main.js` shows a success state locally. Swap in a real endpoint when
-  one exists.
+- Sign-up forms POST `{ name, email, company, cloud, source, pageUrl }` to
+  `SIGNUP_ENDPOINT` in `js/main.js`. Set that to the Apps Script web-app URL
+  (see the `_IDP` repo `docs/LEADS.md`). Until it is set, submit shows an error.
 - Product name ("Strata") is a placeholder.

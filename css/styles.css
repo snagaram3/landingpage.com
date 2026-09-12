@@ -633,6 +633,12 @@ a {
   color: var(--color-accent-bright);
 }
 
+.signup-error {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #b42318;
+}
+
 /* Footer */
 
 .site-footer {
