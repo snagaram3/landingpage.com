@@ -37,7 +37,7 @@ html, body {
   --stats-y: 36px;
   --hero-gap: 48px;
   --copy-max: 860px;
-  --lede-max: 470px;
+  --lede-max: 620px;
 
   --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --serif: "Instrument Serif", "Times New Roman", Times, serif;
@@ -554,11 +554,30 @@ select:focus-visible {
   animation: in-em 1.2s var(--ease) 0.72s both, em-shimmer 4.5s ease-in-out 2.1s infinite;
 }
 
+.hero-mark {
+  margin-top: 18px;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  letter-spacing: -0.03em;
+  color: var(--stage-text);
+}
+
+.resilience {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--copper-bright);
+}
+
+.hero-mark .resilience {
+  font-size: 1.18em;
+  animation: em-shimmer 4.5s ease-in-out 2.1s infinite;
+}
+
 .lede {
   max-width: var(--lede-max);
-  margin-top: 18px;
+  margin-top: 14px;
   color: var(--stage-muted);
-  font-size: var(--lede);
+  font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: -0.015em;
@@ -1029,6 +1048,115 @@ html.js .reveal.is-visible {
   72%, 100% { stroke-dashoffset: 0; }
 }
 
+.bring-life {
+  margin-top: 2.4rem;
+}
+
+.life-board {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 0.6rem;
+}
+
+.life-panel {
+  padding: 1.35rem 1.25rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: #fffdf8;
+}
+
+.life-kicker {
+  margin: 0 0 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--copper-deep);
+}
+
+.life-stage {
+  height: 88px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  background: var(--stage);
+  color: var(--stage-text);
+}
+
+.life-stage svg {
+  width: 56px;
+  height: 56px;
+}
+
+.life-stage--code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+}
+
+.life-stage--code span {
+  display: block;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(243, 238, 230, 0.28);
+  transform-origin: left center;
+}
+
+.life-stage--code span:nth-child(1) { width: 78%; }
+.life-stage--code span:nth-child(2) { width: 54%; }
+.life-stage--code span:nth-child(3) { width: 66%; }
+
+.diagram.is-playing .life-stage--code span {
+  animation: code-type 2.2s var(--ease) infinite;
+}
+
+.diagram.is-playing .life-stage--code span:nth-child(2) { animation-delay: 0.15s; }
+.diagram.is-playing .life-stage--code span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes code-type {
+  0%, 100% { transform: scaleX(0.35); opacity: 0.35; }
+  40%, 70% { transform: scaleX(1); opacity: 1; }
+}
+
+.diagram.is-playing .life-stage--live {
+  box-shadow: inset 0 0 0 1px rgba(198, 90, 36, 0.35);
+}
+
+.life-panel h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.life-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.life-join {
+  width: 22px;
+  align-self: center;
+  height: 2px;
+  background: var(--copper);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.life-join::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -4px;
+  border: 5px solid transparent;
+  border-left-color: var(--copper);
+}
+
 .pain {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1367,6 +1495,28 @@ html.js .reveal.is-visible {
 }
 
 @media (max-width: 700px) {
+  .life-board {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .life-join {
+    width: 2px;
+    height: 22px;
+    justify-self: center;
+  }
+
+  .life-join::after {
+    right: auto;
+    left: -4px;
+    top: auto;
+    bottom: -1px;
+    border: 5px solid transparent;
+    border-top-color: var(--copper);
+    border-left-color: transparent;
+  }
+
   .scale-flow {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -1436,6 +1586,10 @@ html.js .reveal.is-visible {
   color: var(--muted);
   max-width: 700px;
   line-height: 1.6;
+}
+
+.section .resilience {
+  color: var(--copper-deep);
 }
 
 .index-list {
