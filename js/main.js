@@ -18,6 +18,11 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
     };
   }
 
+  function isHoneypotFilled(form) {
+    const bait = form.querySelector('input[name="website"]');
+    return Boolean(bait && String(bait.value || "").trim());
+  }
+
   function showFormError(form, message) {
     let el = form.querySelector("[data-signup-error]");
     if (!el) {
@@ -51,6 +56,11 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
 
       if (!form.checkValidity()) {
         form.reportValidity();
+        return;
+      }
+
+      if (isHoneypotFilled(form)) {
+        onSuccess(form);
         return;
       }
 
@@ -140,7 +150,7 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
     revealEls.forEach((el) => observer.observe(el));
@@ -182,7 +192,7 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
   }
 
   function setupScrollSpy() {
-    const links = [...document.querySelectorAll(".nav-pill")];
+    const links = [...document.querySelectorAll(".nav-link")];
     const targets = links
       .map((link) => {
         const id = link.getAttribute("href");
@@ -202,6 +212,21 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
       { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
     );
     targets.forEach((section) => observer.observe(section));
+  }
+
+  function setupHeaderScroll() {
+    const header = document.querySelector(".header");
+    const stage = document.querySelector(".stage");
+    if (!header) return;
+
+    const update = () => {
+      const threshold = stage ? Math.max(24, stage.offsetHeight - header.offsetHeight - 8) : 24;
+      header.classList.toggle("is-solid", window.scrollY > threshold);
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
   }
 
   function setupMenu() {
@@ -246,6 +271,7 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
     setupSignupForms();
     setupAppear();
     setupScrollReveal();
+    setupHeaderScroll();
     setupMenu();
     setupPointerGlow();
     setupParallax();

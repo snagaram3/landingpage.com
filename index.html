@@ -4,7 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strata. You build it. We bring it to life.</title>
-  <meta name="description" content="For builders without a platform team. Paste your repo. Strata infers the infrastructure, provisions it in your cloud, and load-tests it before you launch.">
+  <meta name="description" content="For teams without a platform hire. Connect a public GitHub repo. Strata infers the infrastructure, provisions it in your cloud, and load-tests it before you launch.">
+  <link rel="canonical" href="https://snagaram3.github.io/landingpage.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Strata">
+  <meta property="og:url" content="https://snagaram3.github.io/landingpage.com/">
+  <meta property="og:title" content="Strata. You build it. We bring it to life.">
+  <meta property="og:description" content="Connect a public GitHub repo. We infer the databases, caches, and queues, stand them up in your own account, then load-test before you launch.">
+  <meta property="og:image" content="https://snagaram3.github.io/landingpage.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strata. You build it. We bring it to life.">
+  <meta name="twitter:description" content="Connect a public GitHub repo. We infer the databases, caches, and queues, stand them up in your own account, then load-test before you launch.">
+  <meta name="twitter:image" content="https://snagaram3.github.io/landingpage.com/og.png">
+  <meta name="theme-color" content="#1f1a15">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c65a24'%3E%3Crect x='3' y='5' width='18' height='3' rx='1.2'/%3E%3Crect x='5' y='10.5' width='14' height='3' rx='1.2'/%3E%3Crect x='7' y='16' width='10' height='3' rx='1.2'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,10 +45,9 @@
     </a>
 
     <nav id="site-nav" class="nav" aria-label="Primary">
-      <a href="#problem" class="nav-pill appear appear--scale" style="--d: 0.16s">Problem</a>
-      <a href="#how-it-works" class="nav-pill appear appear--soft" style="--d: 0.28s">How it works</a>
-      <a href="#model" class="nav-pill appear appear--scale" style="--d: 0.40s">How we work</a>
-      <a href="#signup" class="nav-pill appear appear--soft" style="--d: 0.52s">Early access</a>
+      <a href="#problem" class="nav-link appear appear--soft" style="--d: 0.16s">Problem</a>
+      <a href="#how-it-works" class="nav-link appear appear--soft" style="--d: 0.28s">How it works</a>
+      <a href="#account" class="nav-link appear appear--soft" style="--d: 0.40s">In your account</a>
     </nav>
 
     <div class="header-end">
@@ -62,7 +75,7 @@
           <svg class="badge-star" viewBox="0 0 24 24" width="18" height="20" aria-hidden="true">
             <path fill="currentColor" d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"></path>
           </svg>
-          For builders without a platform team
+          For teams without a platform hire
         </p>
 
         <h1>
@@ -71,13 +84,18 @@
         </h1>
 
         <p class="lede appear appear--soft" style="--d: 0.82s">
-          Paste your repo. We infer the databases, caches, and queues, stand them up
-          in your own account, then load-test so the <span class="resilience">resilience</span> is proven before launch.
+          Connect a public GitHub repo. We infer the databases, caches, and queues,
+          stand them up in your own account, then load-test so the
+          <span class="resilience">resilience</span> is proven before launch.
         </p>
 
         <form class="hero-signup appear appear--btn" id="hero-signup-form" style="--d: 0.96s" novalidate>
           <label class="sr-only" for="hero-email">Work email</label>
           <input type="email" id="hero-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <div class="hp" aria-hidden="true">
+            <label for="hero-website">Website</label>
+            <input type="text" id="hero-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          </div>
           <button type="submit" class="btn btn-solid hero-btn">Get early access</button>
         </form>
 
@@ -86,30 +104,6 @@
         </p>
       </div>
     </section>
-
-    <figure class="hero-story appear appear--soft" data-diagram style="--d: 1.22s">
-      <ol class="story">
-        <li class="story-beat" style="--i: 0">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="16" y="10" width="32" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 22h16M24 30h12M24 38h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <span class="story-cap">You build</span>
-        </li>
-        <li class="story-join" aria-hidden="true"></li>
-        <li class="story-beat" style="--i: 1">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="28" cy="28" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M37 37l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path class="scan-arc" d="M20 28h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <span class="story-cap">We infer</span>
-        </li>
-        <li class="story-join" aria-hidden="true"></li>
-        <li class="story-beat story-beat--cloud" style="--i: 2">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 38c0-8 6-14 16-14 2 0 4 .4 6 1.2C38 20 43 18 48 21c5 3 5 10 2 14 6 1 8 8 3 12H16c-6 0-8-7-2-9z" fill="none" stroke="currentColor" stroke-width="2"/><rect class="ink-copper" x="22" y="34" width="7" height="7" rx="1"/><ellipse class="ink-copper" cx="36" cy="38" rx="5" ry="3"/><rect class="ink-bright" x="44" y="34" width="6" height="6" rx="1"/></svg>
-          <span class="story-cap">It goes live</span>
-        </li>
-        <li class="story-join" aria-hidden="true"></li>
-        <li class="story-beat story-beat--ok" style="--i: 3">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="16" fill="none" stroke="currentColor" stroke-width="2"/><path class="ok-tick" d="M22 33l7 7 14-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="story-cap">Load-tested</span>
-        </li>
-      </ol>
-    </figure>
 
     <footer class="stats" aria-label="What Strata does">
       <div class="stat appear appear--stat" style="--d: 1.12s">
@@ -160,23 +154,23 @@
         <p class="eyebrow reveal">The problem</p>
         <h2 class="reveal">The app is done. The infrastructure is not.</h2>
         <p class="section-lead reveal">
-          You can vibe-code a product in a weekend. Standing up a real database, cache, and queue
-          in your own cloud still takes a team you do not have.
+          The product is ready to show customers. Standing up a real database, cache,
+          and queue in your own cloud still takes a platform hire you have not made.
         </p>
 
-        <figure class="diagram reveal" data-diagram>
+        <figure class="diagram" data-diagram>
           <div class="pain">
-            <div class="pain-card">
+            <div class="pain-card reveal">
               <svg viewBox="0 0 80 64" aria-hidden="true"><rect x="8" y="22" width="28" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect class="pain-ticket" x="18" y="14" width="28" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect class="pain-ticket pain-ticket--2 ink-sand" x="28" y="6" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><path class="stroke-copper" d="M56 40l8 8M64 40l-8 8" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
               <h3>No one to file the ticket with</h3>
               <p>Every database, queue, or cache is another week of docs, consoles, and guesswork. There is no platform team on the other side.</p>
             </div>
-            <div class="pain-card">
+            <div class="pain-card reveal">
               <svg viewBox="0 0 80 64" aria-hidden="true"><path d="M10 44h60" stroke="currentColor" stroke-width="1.4" opacity=".35"/><path class="pain-crash" d="M12 36l12-8 10 6 14-16 8 4 12 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle class="pain-break ink-copper" cx="56" cy="18" r="5"/></svg>
               <h3>You find out at launch</h3>
               <p>The first traffic spike is the first load test. You find out the stack cannot hold when users are already on it.</p>
             </div>
-            <div class="pain-card">
+            <div class="pain-card reveal">
               <svg viewBox="0 0 80 64" aria-hidden="true"><path d="M16 16h20v32H16zM36 16h20v32H36" fill="none" stroke="currentColor" stroke-width="1.8"/><path class="pain-copy" d="M24 24h8M24 32h8M44 24h8M44 32h8" stroke="currentColor" stroke-width="1.5"/></svg>
               <h3>You should not have to become DevOps</h3>
               <p>Terraform, scaling policies, and load tests are a second product. You came to ship the first one.</p>
@@ -195,33 +189,34 @@
           them in your own cloud. You keep building. We bring the stack to life.
         </p>
 
-        <figure class="diagram bring-life reveal" data-diagram>
+        <figure class="diagram bring-life" data-diagram>
           <div class="life-board">
-            <div class="life-panel" style="--i: 0">
+            <div class="life-panel reveal" style="--i: 0">
               <p class="life-kicker">You</p>
-              <div class="life-stage life-stage--code" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
+              <pre class="life-preview" aria-hidden="true"><code>app/
+  package.json
+  src/db.ts</code></pre>
               <h3>You build it</h3>
-              <p>The app, the idea, the weekend repo. That is your job.</p>
+              <p>The app and the repo. That is your job.</p>
             </div>
             <i class="life-join" aria-hidden="true"></i>
-            <div class="life-panel" style="--i: 1">
+            <div class="life-panel reveal" style="--i: 1">
               <p class="life-kicker">Strata</p>
-              <div class="life-stage" aria-hidden="true">
-                <svg viewBox="0 0 64 64"><circle cx="28" cy="28" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M37 37l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path class="scan-arc stroke-copper" d="M20 28h16" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
+              <pre class="life-preview" aria-hidden="true"><code><span class="tok">pg</span>      → Postgres
+<span class="tok">ioredis</span> → Redis
+<span class="tok">bullmq</span>  → Queue</code></pre>
               <h3>We infer the stack</h3>
-              <p>Databases, caches, queues. A plan from the code, not a catalog form.</p>
+              <p>A plan from the code, with the file that caused each line. Not a catalog form.</p>
             </div>
             <i class="life-join" aria-hidden="true"></i>
-            <div class="life-panel" style="--i: 2">
+            <div class="life-panel reveal" style="--i: 2">
               <p class="life-kicker">Your cloud</p>
-              <div class="life-stage life-stage--live" aria-hidden="true">
-                <svg viewBox="0 0 64 64"><path d="M14 38c0-8 6-14 16-14 2 0 4 .4 6 1.2C38 20 43 18 48 21c5 3 5 10 2 14 6 1 8 8 3 12H16c-6 0-8-7-2-9z" fill="none" stroke="currentColor" stroke-width="2"/><path class="ok-tick stroke-copper" d="M24 36l6 6 12-14" fill="none" stroke-width="2.4" stroke-linecap="round"/></svg>
-              </div>
+              <pre class="life-preview life-preview--live" aria-hidden="true"><code>PostgreSQL
+Redis
+Queue
+in your account</code></pre>
               <h3>It goes live in your cloud</h3>
-              <p>Provisioned in your account. Then we load-test before anyone else hits it.</p>
+              <p>You approve the plan, then connect the account. We provision. Then we load-test.</p>
             </div>
           </div>
         </figure>
@@ -232,15 +227,15 @@
       <div class="container">
         <p class="eyebrow reveal">How it works</p>
         <h2 class="reveal">From a repo to a live stack</h2>
-        <figure class="diagram scale-chart reveal" data-diagram>
+        <figure class="diagram scale-chart" data-diagram>
           <div class="scale-board">
             <ol class="scale-flow">
               <li class="scale-node" style="--i: 0">
                 <span class="scale-icon">
                   <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="16" y="12" width="32" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="26" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 44c2.4-6 17.6-6 20 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 </span>
-                <strong class="scale-cap">Sign up</strong>
-                <span class="scale-sub">Connect project and cloud</span>
+                <strong class="scale-cap">Connect</strong>
+                <span class="scale-sub">A public GitHub repo</span>
               </li>
               <li class="scale-node" style="--i: 1">
                 <span class="scale-icon">
@@ -261,14 +256,14 @@
                   </svg>
                 </span>
                 <strong class="scale-cap">Plan</strong>
-                <span class="scale-sub">Databases, caches, queues</span>
+                <span class="scale-sub">You approve before create</span>
               </li>
               <li class="scale-node" style="--i: 3">
                 <span class="scale-icon">
                   <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 36c0-8 6-14 16-14 2 0 4 .4 6 1.2C40 18 45 16 50 19c5 3 5 10 2 14 6 1 8 8 3 12H18c-6 0-8-7-2-9z" fill="none" stroke="currentColor" stroke-width="2"/><ellipse class="cloud-drop ink-copper" cx="28" cy="34" rx="4" ry="2"/><rect class="cloud-drop ink-bright" x="36" y="30" width="6" height="6" rx="1"/></svg>
                 </span>
                 <strong class="scale-cap">Your cloud</strong>
-                <span class="scale-sub">Provisioned in your account</span>
+                <span class="scale-sub">Then you connect the account</span>
               </li>
               <li class="scale-node scale-node--ok" style="--i: 4">
                 <span class="scale-icon">
@@ -280,76 +275,34 @@
             </ol>
           </div>
         </figure>
-        <ol class="flow">
-          <li class="flow-step reveal">
-            <span class="flow-num" aria-hidden="true">01</span>
-            <div class="flow-body">
-              <h3>Sign up</h3>
-              <p>Connect the repo and the cloud account. You stay the owner. Nothing leaves your cloud.</p>
-            </div>
-          </li>
-          <li class="flow-step reveal">
-            <span class="flow-num" aria-hidden="true">02</span>
-            <div class="flow-body">
-              <h3>Scan the project</h3>
-              <p>We read the codebase the way a platform engineer would, without you becoming one.</p>
-            </div>
-          </li>
-          <li class="flow-step reveal">
-            <span class="flow-num" aria-hidden="true">03</span>
-            <div class="flow-body">
-              <h3>Identify managed infra</h3>
-              <p>We detect the databases, queues, caches, and networking the project actually needs.</p>
-            </div>
-          </li>
-          <li class="flow-step reveal">
-            <span class="flow-num" aria-hidden="true">04</span>
-            <div class="flow-body">
-              <h3>Provision</h3>
-              <p>Those components are provisioned automatically, directly inside your own cloud account.</p>
-            </div>
-          </li>
-          <li class="flow-step reveal">
-            <span class="flow-num" aria-hidden="true">05</span>
-            <div class="flow-body">
-              <h3>Load test</h3>
-              <p>We simulate real traffic and prove the stack holds before anyone else hits it.</p>
-            </div>
-          </li>
-        </ol>
       </div>
     </section>
 
-    <section class="section section-alt" id="model">
+    <section class="section section-alt" id="account">
       <div class="container">
-        <p class="eyebrow reveal">How we work together</p>
+        <p class="eyebrow reveal">In your account</p>
         <h2 class="reveal">You keep your cloud. We run the control plane.</h2>
         <p class="section-lead reveal">
           The account stays yours. Infra runs inside AWS, GCP, or Azure, on your bill.
-          We own the control plane that provisions it. We never take the account.
+          We never take the account. You grant a role only after you approve a plan.
         </p>
 
-        <figure class="diagram reveal" data-diagram>
+        <figure class="diagram" data-diagram>
           <div class="ownership">
-            <div class="ownership-plane">
-              <p class="own-label">Ours</p>
-              <svg class="ownership-mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="6" rx="2"/><rect x="10" y="21" width="28" height="6" rx="2"/><rect x="14" y="32" width="20" height="6" rx="2"/></svg>
-              <h3>Strata control plane</h3>
-              <p>Provisioning, state files, and scaling policies. We send instructions in. We never take the account.</p>
-              <i class="ownership-beam" aria-hidden="true"></i>
-              <i class="ownership-beam ownership-beam--2" aria-hidden="true"></i>
-              <i class="ownership-dot" aria-hidden="true"></i>
-            </div>
-            <div class="ownership-cloud">
+            <div class="ownership-card reveal">
               <p class="own-label">Yours</p>
-              <svg class="ownership-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-              <h3>Your locked cloud</h3>
+              <h3>Your cloud</h3>
               <p>Compute, data, and caches stay inside AWS, GCP, or Azure, under your billing.</p>
               <ul class="own-res-list">
                 <li class="own-res own-res--db"><span>Database</span></li>
                 <li class="own-res own-res--box"><span>Compute</span></li>
                 <li class="own-res own-res--cache"><span>Cache</span></li>
               </ul>
+            </div>
+            <div class="ownership-card reveal">
+              <p class="own-label">Ours</p>
+              <h3>Strata control plane</h3>
+              <p>Provisioning, state files, and scaling policies. We send instructions in. We never take the account.</p>
             </div>
           </div>
         </figure>
@@ -358,6 +311,26 @@
           You pay your cloud provider for what you use. You pay Strata to stand it up
           and load-test it.
         </p>
+
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <h3>The role we need</h3>
+            <p>A scoped role that can create and manage the services in the approved plan. We do not become the account owner. We do not need your application data or your users&rsquo; data.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>What &ldquo;we infer&rdquo; means</h3>
+            <p>If <code>package.json</code> depends on <code>pg</code>, the plan says PostgreSQL and cites the file that caused it. Nothing is created until you approve that plan and connect the account.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>If you leave</h3>
+            <p>The infra stays in your account, on your bill. You can keep running it without us. We do not hold your data hostage.</p>
+          </article>
+        </div>
+
+        <aside class="trust-note reveal">
+          <p><strong>What we read today.</strong> JavaScript, TypeScript, and Python. Other languages get a thin plan rather than a guessed one.</p>
+          <p><strong>Where it lands.</strong> Your AWS, GCP, or Azure account &mdash; you tell us which. Connecting the cloud is a later step, after the plan.</p>
+        </aside>
       </div>
     </section>
 
@@ -377,7 +350,11 @@
           </div>
           <div class="form-row">
             <label for="company">Company or project</label>
-            <input type="text" id="company" name="company" autocomplete="organization" required placeholder="Studio, startup, or repo name">
+            <input type="text" id="company" name="company" autocomplete="organization" required placeholder="Company name">
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
           </div>
           <div class="form-row">
             <label for="cloud">Cloud provider</label>
@@ -408,6 +385,10 @@
         Strata
       </span>
       <p>&copy; 2026 Strata. You build it. We bring it to life.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#account">In your account</a>
+        <a href="#signup">Early access</a>
+      </nav>
     </div>
   </footer>
 
