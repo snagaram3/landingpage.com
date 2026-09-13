@@ -106,6 +106,8 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
         if (stalled) nodes.forEach(markIn);
       });
     });
+
+    window.setTimeout(() => nodes.forEach(markIn), 1800);
   }
 
   function setupScrollReveal() {
