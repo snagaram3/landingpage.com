@@ -1,4 +1,4 @@
-# Strata — You ship, we scale.
+# Strata. You ship, we scale.
 
 Landing page for Strata, an Internal Developer Platform (IDP). It's a
 customer-facing sign-up page that explains the problem, the solution, how the
@@ -7,14 +7,14 @@ ownership from control-plane ownership.
 
 ## What it covers
 
-- **Problem / solution** — why manual provisioning and untested scaling are
+- **Problem / solution:** why manual provisioning and untested scaling are
   risky, and how Strata addresses it.
-- **How it works** — the sign up → scan project → identify managed infra →
+- **How it works:** the sign up → scan project → identify managed infra →
   provision → load test & scale flow.
-- **How we work together** — client keeps their own cloud account; Strata
+- **How we work together:** client keeps their own cloud account; Strata
   owns the control plane (provisioning engine, Terraform/OpenTofu state
   files, scaling policies).
-- **Sign-up form** — captures name, work email, company, and cloud provider.
+- **Sign-up form:** captures name, work email, company, and cloud provider.
 
 ## Stack
 

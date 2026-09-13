@@ -3,48 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strata — You ship, we scale.</title>
-  <meta name="description" content="Strata scans your project, provisions the managed infrastructure it needs, and load-tests it — all inside your own cloud account. You ship, we scale.">
+  <title>Strata. You ship, we scale.</title>
+  <meta name="description" content="Strata scans your project, provisions the managed infrastructure it needs, and load-tests it, all inside your own cloud account. You ship, we scale.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c65a24'%3E%3Crect x='3' y='5' width='18' height='3' rx='1.2'/%3E%3Crect x='5' y='10.5' width='14' height='3' rx='1.2'/%3E%3Crect x='7' y='16' width='10' height='3' rx='1.2'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <style>html, body { background: #f3eee6 !important; color: #1c1916; }</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="pointer-glow" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="logo">Strata</a>
-      <nav aria-label="Primary">
-        <a href="#problem">Problem</a>
-        <a href="#solution">Solution</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#model">How we work</a>
-      </nav>
-      <a href="#signup" class="btn btn-primary btn-sm">Get early access</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="menu-backdrop" data-menu-close hidden></div>
+
+  <header class="header">
+    <a href="#top" class="logo appear appear--scale" aria-label="Strata" style="--d: 0.08s">
+      <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <rect class="logo-layer" x="3" y="5" width="18" height="3" rx="1.2"></rect>
+        <rect class="logo-layer" x="5" y="10.5" width="14" height="3" rx="1.2"></rect>
+        <rect class="logo-layer" x="7" y="16" width="10" height="3" rx="1.2"></rect>
+      </svg>
+      Strata
+    </a>
+
+    <nav id="site-nav" class="nav" aria-label="Primary">
+      <a href="#problem" class="nav-pill appear appear--scale" style="--d: 0.16s">Problem</a>
+      <a href="#how-it-works" class="nav-pill appear appear--soft" style="--d: 0.28s">How it works</a>
+      <a href="#model" class="nav-pill appear appear--scale" style="--d: 0.40s">How we work</a>
+      <a href="#signup" class="nav-pill appear appear--soft" style="--d: 0.52s">Early access</a>
+    </nav>
+
+    <div class="header-end">
+      <a href="#signup" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s">Get early access</a>
+      <button class="burger appear appear--scale" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" style="--d: 0.34s">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main id="main">
+    <div class="stage">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="atmosphere" aria-hidden="true">
+        <div class="atmosphere-grid"></div>
+        <div class="atmosphere-scan"></div>
+        <div class="atmosphere-scan atmosphere-scan--late"></div>
+        <div class="atmosphere-orb atmosphere-orb--a"></div>
+        <div class="atmosphere-orb atmosphere-orb--b"></div>
+        <div class="atmosphere-glow"></div>
+      </div>
     <section class="hero" id="top">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <p class="eyebrow eyebrow-on-dark reveal">Internal Developer Platform</p>
-        <h1 class="reveal">You ship.<br><span class="accent-text">We scale.</span></h1>
-        <p class="lead reveal">
-          Strata scans your project, provisions the managed infrastructure it needs, and load-tests the
-          result &mdash; so everything you ship scales <span class="highlight-chip">with resilience</span>,
-          inside your own cloud.
+      <div class="hero-copy">
+        <p class="badge appear appear--pop" style="--d: 0.22s">
+          <svg class="badge-star" viewBox="0 0 24 24" width="18" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"></path>
+          </svg>
+          Internal Developer Platform
         </p>
-        <form class="hero-signup reveal" id="hero-signup-form" novalidate>
+
+        <h1>
+          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.42s">You ship.</span></span>
+          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.62s">We <em>scale.</em></span></span>
+        </h1>
+
+        <p class="lede appear appear--soft" style="--d: 0.82s">
+          Strata scans your project, provisions the managed infrastructure it needs, and load-tests the
+          result, so everything you ship scales with resilience, inside your own cloud.
+        </p>
+
+        <form class="hero-signup appear appear--btn" id="hero-signup-form" style="--d: 0.96s" novalidate>
           <label class="sr-only" for="hero-email">Work email</label>
           <input type="email" id="hero-email" name="email" placeholder="you@company.com" autocomplete="email" required>
-          <button type="submit" class="btn btn-primary">Get early access</button>
+          <button type="submit" class="btn btn-solid hero-btn">Get early access</button>
         </form>
-        <p class="fine-print reveal">No credit card. No cloud migration. You keep your cloud &mdash; we prove it scales.</p>
+
+        <p class="fine-print appear appear--side" style="--d: 1.10s">
+          No credit card. No cloud migration. You keep your cloud. We prove it scales.
+        </p>
       </div>
     </section>
+
+    <footer class="stats" aria-label="What Strata does">
+      <div class="stat appear appear--stat" style="--d: 1.12s">
+        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="stat-a" x1="3" y1="2" x2="14" y2="22">
+              <stop offset="0" stop-color="#f3eee6" stop-opacity="0.55"></stop>
+              <stop offset="1" stop-color="#c65a24" stop-opacity="0.7"></stop>
+            </linearGradient>
+            <linearGradient id="stat-b" x1="3" y1="2" x2="14" y2="22">
+              <stop offset="0" stop-color="#c65a24" stop-opacity="0.45"></stop>
+              <stop offset="1" stop-color="#f3eee6" stop-opacity="0.7"></stop>
+            </linearGradient>
+          </defs>
+          <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#stat-a)"></rect>
+          <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#stat-b)"></rect>
+          <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#8c3f18"></rect>
+        </svg>
+        <span>Repo in. Inferred plan out.</span>
+      </div>
+      <div class="stat appear appear--stat" style="--d: 1.28s">
+        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#f3eee6"></rect>
+          <path d="M12 7.1v7.4M8.15 12.35L12 16.2l3.85-3.85" fill="none" stroke="#8c3f18" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span>Provisioned in your cloud account</span>
+      </div>
+      <div class="stat appear appear--stat" style="--d: 1.44s">
+        <svg class="stat-icon stat-icon-wide" viewBox="0 0 40 22" aria-hidden="true">
+          <circle cx="10.2" cy="11" r="9.2" fill="#2b2b2b"></circle>
+          <ellipse cx="10.2" cy="12.1" rx="4.15" ry="3.7" fill="#f4f4f4"></ellipse>
+          <circle cx="8.6" cy="11.4" r="0.7" fill="#1a1a1a"></circle>
+          <circle cx="11.8" cy="11.4" r="0.7" fill="#1a1a1a"></circle>
+          <circle cx="20.2" cy="11" r="9.2" fill="#ffffff"></circle>
+          <circle cx="17.8" cy="9.8" r="1.1" fill="#111"></circle>
+          <circle cx="22.6" cy="9.8" r="1.1" fill="#111"></circle>
+          <path d="M17.4 13.6c1.2 1.4 4.2 1.4 5.6 0" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round"></path>
+          <circle cx="30.2" cy="11" r="9.2" fill="#c65a24"></circle>
+          <text x="30.2" y="15.1" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700" font-family="Inter, sans-serif">S</text>
+        </svg>
+        <span>Load-tested before you launch</span>
+      </div>
+    </footer>
+    </div>
 
     <section class="section" id="problem">
       <div class="container">
@@ -56,21 +139,21 @@
             <span class="index-num" aria-hidden="true">01</span>
             <div class="index-body">
               <h3>Provisioning is manual and slow</h3>
-              <p>Every new managed service &mdash; databases, queues, caches &mdash; means another ticket, another runbook, another week of waiting.</p>
+              <p>Every new managed service (databases, queues, caches) means another ticket, another runbook, another week of waiting.</p>
             </div>
           </li>
           <li class="index-item reveal">
             <span class="index-num" aria-hidden="true">02</span>
             <div class="index-body">
               <h3>You find out too late</h3>
-              <p>Most teams discover their infrastructure can&rsquo;t scale during an incident &mdash; not before one.</p>
+              <p>Most teams discover their infrastructure can&rsquo;t scale during an incident, not before one.</p>
             </div>
           </li>
           <li class="index-item reveal">
             <span class="index-num" aria-hidden="true">03</span>
             <div class="index-body">
               <h3>Every team rebuilds the same plumbing</h3>
-              <p>Terraform modules, scaling policies, load tests &mdash; reinvented project after project, team after team.</p>
+              <p>Terraform modules, scaling policies, load tests: reinvented project after project, team after team.</p>
             </div>
           </li>
         </ol>
@@ -84,8 +167,8 @@
         <p class="section-lead reveal">
           Strata is the Internal Developer Platform that scans your codebase, identifies the managed
           infrastructure it needs, provisions it directly inside your own cloud account, and load-tests
-          the result &mdash; so you know your platform can scale <span class="highlight-chip">with resilience</span>,
-          before it has to. You ship the product. We scale the infrastructure underneath it.
+          the result, so you know your platform can scale with resilience, before it has to.
+          You ship the product. We scale the infrastructure underneath it.
         </p>
       </div>
     </section>
@@ -94,7 +177,7 @@
       <div class="container">
         <p class="eyebrow reveal">How it works</p>
         <h2 class="reveal">From sign up to proven scale</h2>
-        <ol class="flow">
+        <ol class="flow reveal">
           <li class="flow-step reveal">
             <span class="flow-num" aria-hidden="true">01</span>
             <div class="flow-body">
@@ -113,7 +196,7 @@
             <span class="flow-num" aria-hidden="true">03</span>
             <div class="flow-body">
               <h3>Identify managed infra</h3>
-              <p>We detect the managed components you need &mdash; databases, queues, caches, networking, CDN &mdash; and what to provision.</p>
+              <p>We detect the managed components you need (databases, queues, caches, networking, CDN) and what to provision.</p>
             </div>
           </li>
           <li class="flow-step reveal">
@@ -127,7 +210,7 @@
             <span class="flow-num" aria-hidden="true">05</span>
             <div class="flow-body">
               <h3>Load test &amp; scale</h3>
-              <p>We simulate real traffic against your infrastructure and prove it scales with resilience &mdash; before launch.</p>
+              <p>We simulate real traffic against your infrastructure and prove it scales with resilience, before launch.</p>
             </div>
           </li>
         </ol>
@@ -140,7 +223,7 @@
         <h2 class="reveal">You keep your cloud. We run the control plane.</h2>
         <p class="section-lead reveal">
           Strata never takes over your cloud account. Your infrastructure runs entirely inside AWS, GCP,
-          or Azure &mdash; under your billing, your compliance boundary, your control. What we own is the
+          or Azure, under your billing, your compliance boundary, your control. What we own is the
           control plane: the provisioning engine, the state files, and the scaling policies that keep it resilient.
         </p>
 
@@ -185,7 +268,7 @@
     <section class="section signup-section" id="signup">
       <div class="container signup-inner">
         <h2 class="reveal">Ready to ship?</h2>
-        <p class="reveal">Request early access &mdash; we&rsquo;ll onboard your team, scan your first project, and start scaling it with you.</p>
+        <p class="reveal">Request early access. We&rsquo;ll onboard your team, scan your first project, and start scaling it with you.</p>
 
         <form id="signup-form" class="signup-form reveal" novalidate>
           <div class="form-row">
@@ -209,10 +292,10 @@
               <option value="other">Other</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Request early access</button>
+          <button type="submit" class="btn btn-solid btn-block hero-btn">Request early access</button>
         </form>
         <p id="signup-success" class="signup-success" role="status" hidden>
-          Thanks &mdash; we&rsquo;ll be in touch shortly.
+          Thanks. We&rsquo;ll be in touch shortly.
         </p>
       </div>
     </section>
@@ -220,8 +303,15 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="logo">Strata</span>
-      <p>&copy; 2026 Strata &mdash; You ship, we scale.</p>
+      <span class="logo">
+        <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="3" rx="1.2"></rect>
+          <rect x="5" y="10.5" width="14" height="3" rx="1.2"></rect>
+          <rect x="7" y="16" width="10" height="3" rx="1.2"></rect>
+        </svg>
+        Strata
+      </span>
+      <p>&copy; 2026 Strata. You ship, we scale.</p>
     </div>
   </footer>
 
