@@ -250,5 +250,26 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
     setupPointerGlow();
     setupParallax();
     setupScrollSpy();
+    setupDiagrams();
   });
+
+  function setupDiagrams() {
+    const diagrams = document.querySelectorAll("[data-diagram]");
+    if (!diagrams.length) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      diagrams.forEach((el) => el.classList.add("is-playing"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-playing", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.35 }
+    );
+    diagrams.forEach((el) => observer.observe(el));
+  }
 })();

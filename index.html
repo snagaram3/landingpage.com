@@ -87,6 +87,30 @@
       </div>
     </section>
 
+    <figure class="hero-story appear appear--soft" data-diagram style="--d: 1.22s">
+      <ol class="story">
+        <li class="story-beat" style="--i: 0">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="16" y="10" width="32" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 22h16M24 30h12M24 38h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="story-cap">Your repo</span>
+        </li>
+        <li class="story-join" aria-hidden="true"></li>
+        <li class="story-beat" style="--i: 1">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="28" cy="28" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M37 37l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path class="scan-arc" d="M20 28h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="story-cap">We scan it</span>
+        </li>
+        <li class="story-join" aria-hidden="true"></li>
+        <li class="story-beat story-beat--cloud" style="--i: 2">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 38c0-8 6-14 16-14 2 0 4 .4 6 1.2C38 20 43 18 48 21c5 3 5 10 2 14 6 1 8 8 3 12H16c-6 0-8-7-2-9z" fill="none" stroke="currentColor" stroke-width="2"/><rect class="ink-copper" x="22" y="34" width="7" height="7" rx="1"/><ellipse class="ink-copper" cx="36" cy="38" rx="5" ry="3"/><rect class="ink-bright" x="44" y="34" width="6" height="6" rx="1"/></svg>
+          <span class="story-cap">Lands in your cloud</span>
+        </li>
+        <li class="story-join" aria-hidden="true"></li>
+        <li class="story-beat story-beat--ok" style="--i: 3">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="16" fill="none" stroke="currentColor" stroke-width="2"/><path class="ok-tick" d="M22 33l7 7 14-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="story-cap">Load-tested</span>
+        </li>
+      </ol>
+    </figure>
+
     <footer class="stats" aria-label="What Strata does">
       <div class="stat appear appear--stat" style="--d: 1.12s">
         <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -136,6 +160,26 @@
         <p class="eyebrow reveal">The problem</p>
         <h2 class="reveal">Scaling infrastructure shouldn&rsquo;t be a guessing game</h2>
 
+        <figure class="diagram reveal" data-diagram>
+          <div class="pain">
+            <div class="pain-card">
+              <svg viewBox="0 0 80 64" aria-hidden="true"><rect x="8" y="22" width="28" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect class="pain-ticket" x="18" y="14" width="28" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect class="pain-ticket pain-ticket--2 ink-sand" x="28" y="6" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/><path class="stroke-copper" d="M56 40l8 8M64 40l-8 8" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+              <h3>Tickets pile up</h3>
+              <p>Every new database, queue, or cache is another ticket and another week of waiting.</p>
+            </div>
+            <div class="pain-card">
+              <svg viewBox="0 0 80 64" aria-hidden="true"><path d="M10 44h60" stroke="currentColor" stroke-width="1.4" opacity=".35"/><path class="pain-crash" d="M12 36l12-8 10 6 14-16 8 4 12 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle class="pain-break ink-copper" cx="56" cy="18" r="5"/></svg>
+              <h3>You find out at launch</h3>
+              <p>Most teams learn their infrastructure cannot scale during an incident, not before one.</p>
+            </div>
+            <div class="pain-card">
+              <svg viewBox="0 0 80 64" aria-hidden="true"><path d="M16 16h20v32H16zM36 16h20v32H36" fill="none" stroke="currentColor" stroke-width="1.8"/><path class="pain-copy" d="M24 24h8M24 32h8M44 24h8M44 32h8" stroke="currentColor" stroke-width="1.5"/></svg>
+              <h3>Every team rebuilds the same pipes</h3>
+              <p>Terraform, scaling policies, and load tests get reinvented on every project.</p>
+            </div>
+          </div>
+        </figure>
+
         <ol class="index-list">
           <li class="index-item reveal">
             <span class="index-num" aria-hidden="true">01</span>
@@ -179,7 +223,55 @@
       <div class="container">
         <p class="eyebrow reveal">How it works</p>
         <h2 class="reveal">From sign up to proven scale</h2>
-        <ol class="flow reveal">
+        <figure class="diagram scale-chart reveal" data-diagram>
+          <div class="scale-board">
+            <ol class="scale-flow">
+              <li class="scale-node" style="--i: 0">
+                <span class="scale-icon">
+                  <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="16" y="12" width="32" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="26" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 44c2.4-6 17.6-6 20 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                <strong class="scale-cap">Sign up</strong>
+                <span class="scale-sub">Connect project and cloud</span>
+              </li>
+              <li class="scale-node" style="--i: 1">
+                <span class="scale-icon">
+                  <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="28" cy="28" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M37 37l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path class="scan-arc stroke-copper" d="M20 28h16" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                <strong class="scale-cap">Scan</strong>
+                <span class="scale-sub">Read the codebase</span>
+              </li>
+              <li class="scale-node" style="--i: 2">
+                <span class="scale-icon">
+                  <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <ellipse class="glyph-db" cx="20" cy="36" rx="8" ry="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path class="glyph-db" d="M12 36v10c0 2.2 3.6 4 8 4s8-1.8 8-4V36" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <rect class="glyph-cache" x="36" y="14" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path class="glyph-cache stroke-copper" d="M40 22h8M44 18v8" fill="none" stroke-width="1.6"/>
+                    <rect class="glyph-q" x="34" y="38" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path class="glyph-q" d="M38 42h10M38 46h7" stroke="currentColor" stroke-width="1.4"/>
+                  </svg>
+                </span>
+                <strong class="scale-cap">Plan</strong>
+                <span class="scale-sub">Databases, caches, queues</span>
+              </li>
+              <li class="scale-node" style="--i: 3">
+                <span class="scale-icon">
+                  <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 36c0-8 6-14 16-14 2 0 4 .4 6 1.2C40 18 45 16 50 19c5 3 5 10 2 14 6 1 8 8 3 12H18c-6 0-8-7-2-9z" fill="none" stroke="currentColor" stroke-width="2"/><ellipse class="cloud-drop ink-copper" cx="28" cy="34" rx="4" ry="2"/><rect class="cloud-drop ink-bright" x="36" y="30" width="6" height="6" rx="1"/></svg>
+                </span>
+                <strong class="scale-cap">Your cloud</strong>
+                <span class="scale-sub">Provisioned in your account</span>
+              </li>
+              <li class="scale-node scale-node--ok" style="--i: 4">
+                <span class="scale-icon">
+                  <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="2"/><path class="ok-tick stroke-copper" d="M22 33l7 7 14-16" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <strong class="scale-cap">Proven</strong>
+                <span class="scale-sub">Load-tested and ready</span>
+              </li>
+            </ol>
+          </div>
+        </figure>
+        <ol class="flow">
           <li class="flow-step reveal">
             <span class="flow-num" aria-hidden="true">01</span>
             <div class="flow-body">
@@ -229,7 +321,32 @@
           control plane: the provisioning engine, the state files, and the scaling policies that keep it resilient.
         </p>
 
-        <div class="model-diagram reveal">
+        <figure class="diagram reveal" data-diagram>
+          <div class="ownership">
+            <div class="ownership-plane">
+              <p class="own-label">Ours</p>
+              <svg class="ownership-mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="6" rx="2"/><rect x="10" y="21" width="28" height="6" rx="2"/><rect x="14" y="32" width="20" height="6" rx="2"/></svg>
+              <h3>Strata control plane</h3>
+              <p>Provisioning, state files, and scaling policies. We send instructions in. We never take the account.</p>
+              <i class="ownership-beam" aria-hidden="true"></i>
+              <i class="ownership-beam ownership-beam--2" aria-hidden="true"></i>
+              <i class="ownership-dot" aria-hidden="true"></i>
+            </div>
+            <div class="ownership-cloud">
+              <p class="own-label">Yours</p>
+              <svg class="ownership-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+              <h3>Your locked cloud</h3>
+              <p>Compute, data, and caches stay inside AWS, GCP, or Azure, under your billing.</p>
+              <ul class="own-res-list">
+                <li class="own-res own-res--db"><span>Database</span></li>
+                <li class="own-res own-res--box"><span>Compute</span></li>
+                <li class="own-res own-res--cache"><span>Cache</span></li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+
+        <div class="model-diagram">
           <div class="model-box">
             <p class="model-label">Yours</p>
             <h3>Your cloud</h3>
