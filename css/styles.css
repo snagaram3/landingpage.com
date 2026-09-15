@@ -1227,6 +1227,14 @@ html.js .reveal.is-visible {
   margin: 0;
 }
 
+.own-figure {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 0 1.1rem;
+}
+
 .own-label {
   margin: 0 0 0.55rem;
   text-transform: uppercase;
