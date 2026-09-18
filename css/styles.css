@@ -64,6 +64,9 @@ body {
   overflow-x: hidden;
   position: relative;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 a {
@@ -84,6 +87,12 @@ svg {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 1.25rem;
+  }
 }
 
 .sr-only {
@@ -614,6 +623,8 @@ select:focus-visible {
   font-family: inherit;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .hero-signup input[type="email"]::placeholder {
@@ -1494,6 +1505,20 @@ html.js .reveal.is-visible {
     display: block;
     max-width: 22ch;
   }
+
+  .tiers-grid,
+  .compliance-grid {
+    gap: 1.25rem;
+  }
+
+  .tier-card,
+  .compliance-card {
+    padding: 1.5rem;
+  }
+
+  .trust-grid {
+    gap: 1.25rem;
+  }
 }
 
 .eyebrow {
@@ -1830,6 +1855,10 @@ html.js .reveal.is-visible {
   color: var(--stage-text);
   font-size: 1rem;
   font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-row select option {
@@ -1886,6 +1915,22 @@ html.js .reveal.is-visible {
   color: var(--text);
 }
 
+/* Mobile touch improvements */
+
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav-link,
+  a {
+    -webkit-tap-highlight-color: rgba(246, 182, 74, 0.2);
+  }
+
+  .tier-card:active,
+  .compliance-card:active,
+  .trust-card:active {
+    transform: scale(0.98);
+  }
+}
+
 /* Tiers section */
 
 .tiers-grid {
@@ -1906,6 +1951,12 @@ html.js .reveal.is-visible {
 .tier-card:hover {
   transform: translateY(-4px);
   border-color: rgba(246, 182, 74, 0.4);
+}
+
+@media (hover: none) {
+  .tier-card:hover {
+    transform: none;
+  }
 }
 
 .tier-card--highlight {
@@ -1994,6 +2045,12 @@ html.js .reveal.is-visible {
 .compliance-card:hover {
   transform: translateY(-3px);
   border-color: rgba(143, 107, 245, 0.4);
+}
+
+@media (hover: none) {
+  .compliance-card:hover {
+    transform: none;
+  }
 }
 
 .compliance-icon {
@@ -2309,7 +2366,8 @@ html.js .reveal.is-visible {
 
 @media (max-width: 560px) {
   :root {
-    --h1: 34px;
+    --h1: 32px;
+    --h2: 28px;
     --lede: 16px;
     --header-x: 16px;
   }
@@ -2326,6 +2384,159 @@ html.js .reveal.is-visible {
 
   .header-cta {
     display: none;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-lead {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .tier-card,
+  .compliance-card {
+    padding: 1.5rem;
+  }
+
+  .tier-name {
+    font-size: 22px;
+  }
+
+  .tier-desc {
+    font-size: 14px;
+  }
+
+  .tier-features li {
+    font-size: 14px;
+    padding: 0.6rem 0 0.6rem 1.5rem;
+  }
+
+  .compliance-card h3 {
+    font-size: 18px;
+  }
+
+  .compliance-card p {
+    font-size: 14px;
+  }
+
+  .compliance-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .compliance-note {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .compliance-note p {
+    font-size: 14px;
+  }
+
+  .trust-card {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .trust-card h3 {
+    font-size: 17px;
+  }
+
+  .trust-card p {
+    font-size: 14px;
+  }
+
+  .trust-note {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .trust-note p {
+    font-size: 14px;
+  }
+
+  .model-note {
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+
+  .pain-card,
+  .life-panel {
+    padding: 1.25rem;
+  }
+
+  .pain-card h3,
+  .life-panel h3 {
+    font-size: 17px;
+  }
+
+  .pain-card p,
+  .life-panel p {
+    font-size: 14px;
+  }
+
+  .ownership-card {
+    padding: 1.5rem;
+  }
+
+  .ownership-card h3 {
+    font-size: 18px;
+  }
+
+  .ownership-card p {
+    font-size: 14px;
+  }
+
+  .signup-inner h2 {
+    font-size: 28px;
+  }
+
+  .signup-inner > p {
+    font-size: 15px;
+  }
+
+  .form-row input,
+  .form-row select {
+    padding: 0.9rem 1rem;
+    font-size: 16px;
+  }
+
+  .form-row label {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 15px;
+    min-height: 48px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-inner p {
+    font-size: 13px;
   }
 }
 
