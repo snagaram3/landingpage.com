@@ -5,6 +5,9 @@
  */
 const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6D4klfi8mFqtb6paxybg7CeMZSI3MvpDW3w5-TAGc8ovOJBnSbOZ2YQ/exec";
 
+/** Production portal origin, e.g. "https://app.example.com". Empty keeps in-page anchors. */
+const PORTAL_ORIGIN = "";
+
 (function () {
   function payloadFromForm(form, source) {
     const data = new FormData(form);
@@ -13,6 +16,7 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
       email: String(data.get("email") || "").trim(),
       company: String(data.get("company") || ""),
       cloud: String(data.get("cloud") || ""),
+      repo: String(data.get("repo") || "").trim(),
       source,
       pageUrl: window.location.href,
     };
@@ -76,6 +80,42 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
     });
   }
 
+  function track(eventName, extra) {
+    const payload = Object.assign({ event: eventName }, extra || {});
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, extra || {});
+    }
+  }
+
+  function portalOrigin() {
+    if (PORTAL_ORIGIN) return PORTAL_ORIGIN.replace(/\/$/, "");
+    const meta = document.querySelector('meta[name="strata-portal"]');
+    const fromMeta = meta && meta.getAttribute("content");
+    return fromMeta ? fromMeta.replace(/\/$/, "") : "";
+  }
+
+  function setupPortalLinks() {
+    const origin = portalOrigin();
+    document.querySelectorAll("[data-portal-path]").forEach((link) => {
+      const path = link.getAttribute("data-portal-path");
+      if (!origin || !path) return;
+      link.setAttribute("href", `${origin}${path.startsWith("/") ? path : `/${path}`}`);
+    });
+  }
+
+  function setupAnalyticsClicks() {
+    document.addEventListener("click", (event) => {
+      const target = event.target.closest("[data-event]");
+      if (!target) return;
+      track(target.getAttribute("data-event"), {
+        href: target.getAttribute("href") || "",
+        label: (target.textContent || "").trim(),
+      });
+    });
+  }
+
   function setupSignupForms() {
     const heroForm = document.getElementById("hero-signup-form");
     if (heroForm) {
@@ -87,7 +127,8 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
     const signupForm = document.getElementById("signup-form");
     const signupSuccess = document.getElementById("signup-success");
     if (signupForm && signupSuccess) {
-      handleSignupSubmit(signupForm, "footer", () => {
+      handleSignupSubmit(signupForm, "book_review", () => {
+        track("book_review_submit");
         signupForm.hidden = true;
         signupSuccess.hidden = false;
       });
@@ -268,6 +309,8 @@ const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    setupPortalLinks();
+    setupAnalyticsClicks();
     setupSignupForms();
     setupAppear();
     setupScrollReveal();

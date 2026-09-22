@@ -1,20 +1,15 @@
-# Strata. You ship, we scale.
+# Strata. Audit-ready infra from your repo.
 
-Landing page for Strata, an Internal Developer Platform (IDP). It's a
-customer-facing sign-up page that explains the problem, the solution, how the
-platform works end to end, and how the business model splits infrastructure
-ownership from control-plane ownership.
+Landing page for Strata, an Internal Developer Platform. It sells the
+customer-visible loop: analyze a GitHub repo, review an evidence-backed plan,
+provision with guardrails, and keep desired / actual / proof in sync.
 
 ## What it covers
 
-- **Problem / solution:** why manual provisioning and untested scaling are
-  risky, and how Strata addresses it.
-- **How it works:** the sign up → scan project → identify managed infra →
-  provision → load test & scale flow.
-- **How we work together:** client keeps their own cloud account; Strata
-  owns the control plane (provisioning engine, Terraform/OpenTofu state
-  files, scaling policies).
-- **Sign-up form:** captures name, work email, company, and cloud provider.
+- **Problem:** managed-platform trap vs DIY / hire trap for post-traction teams.
+- **How it works:** paste repo → review plan → approve → dashboard.
+- **Tiers:** Lightweight $500 / Standard $2,500 / Enterprise $10K+.
+- **Review form:** name, work email, company, optional repo, cloud provider.
 
 ## Stack
 

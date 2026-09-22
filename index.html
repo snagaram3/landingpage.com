@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strata. You build it. We bring it to life.</title>
-  <meta name="description" content="For teams without a platform hire. Connect a public GitHub repo. Strata infers the infrastructure, provisions it in your cloud, and load-tests it before you launch.">
+  <title>Audit-ready infra from your repo | Strata</title>
+  <meta name="description" content="Paste a GitHub repo. Get an evidence-backed production plan, provisioned with guardrails, plus live proof — without a platform team.">
   <link rel="canonical" href="https://snagaram3.github.io/landingpage.com/">
+  <meta name="strata-portal" content="">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Strata">
   <meta property="og:url" content="https://snagaram3.github.io/landingpage.com/">
-  <meta property="og:title" content="Strata. You build it. We bring it to life.">
-  <meta property="og:description" content="Connect a public GitHub repo. We infer the databases, caches, and queues, stand them up in your own account, then load-test before you launch.">
+  <meta property="og:title" content="Audit-ready infra from your repo | Strata">
+  <meta property="og:description" content="Paste a GitHub repo. Get an evidence-backed production plan, provisioned with guardrails, plus live proof — without a platform team.">
   <meta property="og:image" content="https://snagaram3.github.io/landingpage.com/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Strata. You build it. We bring it to life.">
-  <meta name="twitter:description" content="Connect a public GitHub repo. We infer the databases, caches, and queues, stand them up in your own account, then load-test before you launch.">
+  <meta name="twitter:title" content="Audit-ready infra from your repo | Strata">
+  <meta name="twitter:description" content="Paste a GitHub repo. Get an evidence-backed production plan, provisioned with guardrails, plus live proof — without a platform team.">
   <meta name="twitter:image" content="https://snagaram3.github.io/landingpage.com/og.png">
   <meta name="theme-color" content="#0c0a16">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f6b64a'%3E%3Crect x='3' y='5' width='18' height='3' rx='1.2'/%3E%3Crect x='5' y='10.5' width='14' height='3' rx='1.2'/%3E%3Crect x='7' y='16' width='10' height='3' rx='1.2'/%3E%3C/svg%3E">
@@ -47,13 +48,13 @@
     <nav id="site-nav" class="nav" aria-label="Primary">
       <a href="#problem" class="nav-link appear appear--soft" style="--d: 0.16s">Problem</a>
       <a href="#how-it-works" class="nav-link appear appear--soft" style="--d: 0.28s">How it works</a>
-      <a href="#account" class="nav-link appear appear--soft" style="--d: 0.40s">In your account</a>
-      <a href="#tiers" class="nav-link appear appear--soft" style="--d: 0.52s">Tiers</a>
-      <a href="#compliance" class="nav-link appear appear--soft" style="--d: 0.64s">Compliance</a>
+      <a href="#tiers" class="nav-link appear appear--soft" style="--d: 0.40s">Tiers</a>
+      <a href="#fit" class="nav-link appear appear--soft" style="--d: 0.52s">Fit</a>
+      <a href="#compliance" class="nav-link appear appear--soft" style="--d: 0.64s">Evidence</a>
     </nav>
 
     <div class="header-end">
-      <a href="#signup" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s">Get early access</a>
+      <a href="#how-it-works" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s" data-portal-path="/analyze" data-event="analyze_click">Analyze repo</a>
       <button class="burger appear appear--scale" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" style="--d: 0.34s">
         <span></span><span></span><span></span>
       </button>
@@ -77,87 +78,137 @@
           <svg class="badge-star" viewBox="0 0 24 24" width="18" height="20" aria-hidden="true">
             <path fill="currentColor" d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"></path>
           </svg>
-          For teams without a platform hire
+          For post-traction teams with 1K+ MAU
         </p>
 
-        <h1>
-          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.42s">You build it.</span></span>
-          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.62s">We bring it to <em>life.</em></span></span>
+        <h1 data-ab="hero-headline" data-ab-a="Infrastructure that scales with compliance, not chaos" data-ab-b="Stop building compliance after shipping. Start with it enforced.">
+          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.42s">Infrastructure that scales</span></span>
+          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.62s">with <em>compliance</em>, not chaos.</span></span>
         </h1>
 
         <p class="lede appear appear--soft" style="--d: 0.82s">
-          Connect a public GitHub repo. We infer the databases, caches, and queues,
-          stand them up in your own account, then load-test so the
-          <span class="resilience">resilience</span> is proven before launch.
+          AI made the app cheap. The layer underneath is still expert work.
+          Paste a public GitHub repo. We return an evidence-backed plan,
+          provision with guardrails on, and keep
+          <span class="resilience">desired, actual, and proof</span>
+          in one place — without a platform hire.
         </p>
 
-        <form class="hero-signup appear appear--btn" id="hero-signup-form" style="--d: 0.96s" novalidate>
-          <label class="sr-only" for="hero-email">Work email</label>
-          <input type="email" id="hero-email" name="email" placeholder="you@company.com" autocomplete="email" required>
-          <div class="hp" aria-hidden="true">
-            <label for="hero-website">Website</label>
-            <input type="text" id="hero-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          </div>
-          <button type="submit" class="btn btn-solid hero-btn">Get early access</button>
-        </form>
+        <div class="hero-actions appear appear--btn" style="--d: 0.96s">
+          <a class="btn btn-solid hero-btn" href="#how-it-works" data-portal-path="/analyze" data-event="analyze_click" data-ab="primary-cta" data-ab-a="Analyze your repository" data-ab-b="See your infrastructure plan">Analyze your repository</a>
+          <a class="btn btn-ghost hero-btn" href="#review" data-event="book_review_click">Book a 20-minute review</a>
+        </div>
 
         <p class="fine-print appear appear--side" style="--d: 1.10s">
-          No credit card. No migration. You keep your cloud.
+          No signup to see a plan. Resources stay in your cloud.
         </p>
       </div>
     </section>
 
-    <footer class="stats" aria-label="What Strata does">
+    <footer class="stats" aria-label="Three states we maintain">
       <div class="stat appear appear--stat" style="--d: 1.12s">
         <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <defs>
-            <linearGradient id="stat-a" x1="3" y1="2" x2="14" y2="22">
-              <stop offset="0" stop-color="#ede8fb" stop-opacity="0.55"></stop>
-              <stop offset="1" stop-color="#f6b64a" stop-opacity="0.7"></stop>
-            </linearGradient>
-            <linearGradient id="stat-b" x1="3" y1="2" x2="14" y2="22">
-              <stop offset="0" stop-color="#f6b64a" stop-opacity="0.45"></stop>
-              <stop offset="1" stop-color="#ede8fb" stop-opacity="0.7"></stop>
-            </linearGradient>
-          </defs>
-          <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#stat-a)"></rect>
-          <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="url(#stat-b)"></rect>
+          <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="#ede8fb"></rect>
+          <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="#f6b64a"></rect>
           <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#a9741f"></rect>
         </svg>
-        <span>You build the app</span>
+        <span>Desired — the approved plan</span>
       </div>
       <div class="stat appear appear--stat" style="--d: 1.28s">
         <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
           <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#ede8fb"></rect>
           <path d="M12 7.1v7.4M8.15 12.35L12 16.2l3.85-3.85" fill="none" stroke="#a9741f" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
-        <span>We bring the infra to life</span>
+        <span>Actual — what’s running</span>
       </div>
       <div class="stat appear appear--stat" style="--d: 1.44s">
-        <svg class="stat-icon stat-icon-wide" viewBox="0 0 40 22" aria-hidden="true">
-          <circle cx="10.2" cy="11" r="9.2" fill="#2b2b2b"></circle>
-          <ellipse cx="10.2" cy="12.1" rx="4.15" ry="3.7" fill="#f4f4f4"></ellipse>
-          <circle cx="8.6" cy="11.4" r="0.7" fill="#1a1a1a"></circle>
-          <circle cx="11.8" cy="11.4" r="0.7" fill="#1a1a1a"></circle>
-          <circle cx="20.2" cy="11" r="9.2" fill="#ffffff"></circle>
-          <circle cx="17.8" cy="9.8" r="1.1" fill="#111"></circle>
-          <circle cx="22.6" cy="9.8" r="1.1" fill="#111"></circle>
-          <path d="M17.4 13.6c1.2 1.4 4.2 1.4 5.6 0" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round"></path>
-          <circle cx="30.2" cy="11" r="9.2" fill="#f6b64a"></circle>
-          <text x="30.2" y="15.1" text-anchor="middle" fill="#241804" font-size="12.5" font-weight="700" font-family="Inter, sans-serif">S</text>
+        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3l7 3v6c0 5-3.2 8.8-7 11-3.8-2.2-7-6-7-11V6z" fill="#f6b64a" opacity="0.35"></path>
+          <path d="M8.4 12.2l2.4 2.4 5-5.4" fill="none" stroke="#241804" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
-        <span>Load-tested before you launch</span>
+        <span>Proof — load and evidence</span>
       </div>
     </footer>
     </div>
 
-    <section class="section" id="problem">
+    <section class="section" id="see-it">
+      <div class="container">
+        <p class="eyebrow reveal">See it in 60 seconds</p>
+        <h2 class="reveal">Repo in. Plan, diagram, and proof out.</h2>
+        <p class="section-lead reveal">
+          The same loop a buyer sees on a first call. No catalog. No internals.
+          A public repo becomes a reviewable plan, then a live dashboard.
+        </p>
+
+        <figure class="demo-loop reveal" data-diagram data-demo-loop aria-label="Sixty-second product loop">
+          <div class="demo-screen">
+            <div class="demo-chrome">
+              <span></span><span></span><span></span>
+              <code>/analyze</code>
+            </div>
+
+            <div class="demo-frame demo-frame--analyze" data-beat="0">
+              <div class="demo-orb" aria-hidden="true"></div>
+              <p class="demo-kicker">Analyzing repository…</p>
+              <p class="demo-mono">github.com/acme/checkout-api</p>
+            </div>
+
+            <div class="demo-frame demo-frame--evidence" data-beat="1">
+              <p class="demo-kicker">Requirement · managed PostgreSQL</p>
+              <button class="demo-evidence" type="button" tabindex="-1">
+                <span>Why this exists</span>
+                <code>src/db.ts:14</code>
+                <p><code>import pg from "pg"</code> — primary datastore for checkout sessions.</p>
+              </button>
+            </div>
+
+            <div class="demo-frame demo-frame--diagram" data-beat="2">
+              <p class="demo-kicker">Architecture from the code</p>
+              <svg class="demo-arch" viewBox="0 0 360 140" aria-hidden="true">
+                <rect x="16" y="48" width="88" height="44" rx="8" fill="#8f6bf5"/>
+                <text x="60" y="75" text-anchor="middle" fill="#171329" font-size="12" font-weight="700" font-family="Inter, sans-serif">web</text>
+                <rect x="136" y="20" width="88" height="44" rx="8" fill="#f6b64a"/>
+                <text x="180" y="47" text-anchor="middle" fill="#241804" font-size="12" font-weight="700" font-family="Inter, sans-serif">worker</text>
+                <rect x="136" y="76" width="88" height="44" rx="8" fill="#b19dff"/>
+                <text x="180" y="103" text-anchor="middle" fill="#171329" font-size="12" font-weight="700" font-family="Inter, sans-serif">queue</text>
+                <rect x="256" y="48" width="88" height="44" rx="8" fill="#ede8fb"/>
+                <text x="300" y="75" text-anchor="middle" fill="#171329" font-size="12" font-weight="700" font-family="Inter, sans-serif">postgres</text>
+                <path d="M104 70h32M180 64v12M224 42h32M224 98h16v-8" fill="none" stroke="#f6b64a" stroke-width="2"/>
+              </svg>
+              <p class="demo-cost">Est. cloud spend · $186 / mo before provision</p>
+            </div>
+
+            <div class="demo-frame demo-frame--dash" data-beat="3">
+              <p class="demo-kicker">Dashboard · live resources + load</p>
+              <div class="demo-metrics">
+                <div><strong>Ready</strong><span>12 / 12</span></div>
+                <div><strong>p95</strong><span>142 ms</span></div>
+                <div><strong>errors</strong><span>0.04%</span></div>
+              </div>
+              <svg class="demo-chart" viewBox="0 0 360 80" aria-hidden="true">
+                <path class="demo-wave" d="M8 58 C40 58 48 22 80 28 C112 34 120 16 152 20 C184 24 196 48 228 40 C260 32 272 18 304 22 C328 25 340 36 352 30" fill="none" stroke="#f6b64a" stroke-width="2.4"/>
+                <path d="M8 70h344" stroke="#3a3260" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+          <ol class="demo-beats">
+            <li>Analyze</li>
+            <li>Evidence</li>
+            <li>Diagram</li>
+            <li>Proof</li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="problem">
       <div class="container">
         <p class="eyebrow reveal">The problem</p>
-        <h2 class="reveal">The app is done. The infrastructure is not.</h2>
+        <h2 class="reveal">The app is cheap. Production is still a specialist job.</h2>
         <p class="section-lead reveal">
-          The product is ready to show customers. Standing up a real database, cache,
-          and queue in your own cloud still takes a platform hire you have not made.
+          Teams can ship a product in a week. Database sizing, workers, secrets,
+          migrations, and an answer to “are you audit-ready?” still take months
+          or a platform hire.
         </p>
 
         <figure class="diagram" data-diagram>
@@ -172,8 +223,8 @@
                 <circle cx="67" cy="15" r="8" fill="#171329" stroke="#f6b64a" stroke-width="1.6"/>
                 <path d="M64 12l6 6M70 12l-6 6" stroke="#f6b64a" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
-              <h3>No one to file the ticket with</h3>
-              <p>Every database, queue, or cache is another week of docs, consoles, and guesswork. There is no platform team on the other side.</p>
+              <h3>The managed platform trap</h3>
+              <p>Fast until a customer or auditor asks who changed infrastructure, whether encryption was required, and whether isolation was enforced — not merely available.</p>
             </div>
             <div class="pain-card reveal">
               <svg viewBox="0 0 80 64" aria-hidden="true">
@@ -183,8 +234,8 @@
                 <circle class="pain-break" cx="67" cy="12" r="6" fill="#f6b64a"/>
                 <path d="M67 8v2.4M67 12.6v2M63.4 12h2M68.6 12h2" stroke="#241804" stroke-width="1.4" stroke-linecap="round"/>
               </svg>
-              <h3>You find out at launch</h3>
-              <p>The first traffic spike is the first load test. You find out the stack cannot hold when users are already on it.</p>
+              <h3>The DIY / hire trap</h3>
+              <p>Control becomes a second full-time job. A platform engineer is $150k–220k+ loaded, plus months before they are productive. You came to ship the product.</p>
             </div>
             <div class="pain-card reveal">
               <svg viewBox="0 0 80 64" aria-hidden="true">
@@ -195,76 +246,92 @@
                 <rect x="10" y="30" width="22" height="26" rx="3" fill="#171329" stroke="#3a3260" stroke-width="1.6"/>
                 <path class="pain-copy" d="M15 37h12M15 42h12M15 47h8" stroke="#b19dff" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
-              <h3>You should not have to become DevOps</h3>
-              <p>Terraform, scaling policies, and load tests are a second product. You came to ship the first one.</p>
+              <h3>What you actually need</h3>
+              <p>Guardrails at creation time. A reviewable plan tied to files in your repo. One live picture of desired vs actual vs proof. Not another black box.</p>
             </div>
           </div>
         </figure>
       </div>
     </section>
 
-    <section class="section section-alt" id="solution">
+    <section class="section" id="states">
       <div class="container">
-        <p class="eyebrow reveal">What changes</p>
-        <h2 class="reveal">You write the product. We make the infrastructure real.</h2>
+        <p class="eyebrow reveal">Live state</p>
+        <h2 class="reveal">Three states we maintain for you</h2>
         <p class="section-lead reveal">
-          Strata reads your repo, infers the managed services it needs, and provisions
-          them in your own cloud. You keep building. We bring the stack to life.
+          A DevOps hire keeps this in their head, Slack, and scattered repos.
+          We keep it as a product surface — the same place you approved the plan
+          is where you see whether production matches it.
         </p>
 
         <figure class="diagram bring-life" data-diagram>
           <div class="life-board">
             <div class="life-panel reveal" style="--i: 0">
-              <p class="life-kicker">You</p>
-              <pre class="life-preview" aria-hidden="true"><code>app/
-  package.json
-  src/db.ts</code></pre>
-              <h3>You build it</h3>
-              <p>The app and the repo. That is your job.</p>
+              <p class="life-kicker">Desired</p>
+              <pre class="life-preview" aria-hidden="true"><code>plan/
+  postgres  ← src/db.ts:14
+  redis     ← cache.ts:8
+  worker    ← jobs/index.ts</code></pre>
+              <h3>What should exist</h3>
+              <p>The analyzer plan you approved: requirements, file-level reasons, diagram, and cost before spend.</p>
             </div>
             <i class="life-join" aria-hidden="true"></i>
             <div class="life-panel reveal" style="--i: 1">
-              <p class="life-kicker">Strata</p>
-              <pre class="life-preview" aria-hidden="true"><code><span class="tok">pg</span>      → Postgres
-<span class="tok">ioredis</span> → Redis
-<span class="tok">bullmq</span>  → Queue</code></pre>
-              <h3>We infer the stack</h3>
-              <p>A plan from the code, with the file that caused each line. Not a catalog form.</p>
+              <p class="life-kicker">Actual</p>
+              <pre class="life-preview life-preview--live" aria-hidden="true"><code>PostgreSQL   Ready
+Redis        Ready
+Worker       Ready
+in your account</code></pre>
+              <h3>What is running</h3>
+              <p>Resource status and health in your cloud. You approve once. We watch reconciliation in plain language.</p>
             </div>
             <i class="life-join" aria-hidden="true"></i>
             <div class="life-panel reveal" style="--i: 2">
-              <p class="life-kicker">Your cloud</p>
-              <pre class="life-preview life-preview--live" aria-hidden="true"><code>PostgreSQL
-Redis
-Queue
-in your account</code></pre>
-              <h3>It goes live in your cloud</h3>
-              <p>You approve the plan, then connect the account. We provision. Then we load-test.</p>
+              <p class="life-kicker">Proof</p>
+              <pre class="life-preview" aria-hidden="true"><code>load   p95 142ms
+change trail  18
+controls      on</code></pre>
+              <h3>What you can show</h3>
+              <p>Load results plus a change trail. Evidence that guardrails were enforced — for a buyer or an auditor.</p>
             </div>
           </div>
         </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="pillars">
+      <div class="container">
+        <p class="eyebrow reveal">What you buy</p>
+        <h2 class="reveal">Self-serve. Guardrails in. Scale without a rewrite.</h2>
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <h3>A plan from the repo, not a catalog form</h3>
+            <p>Point at GitHub. We infer databases, caches, workers, and networking, then generate a reviewable plan with file and line reasons. You focus on shipping. We handle the layer underneath.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>Compliance built in, not bolted on</h3>
+            <p>Encryption, private networking, and audit logging are on at creation — not optional toggles. Every change is a trail you can hand to an auditor. We do not certify you. Your auditor does.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>Start small. Scale on purpose.</h3>
+            <p>Begin with a container and a managed database. Add Kubernetes when traffic demands it. Expand to multi-region when a contract requires it. Same plan. Different topology. No forklift.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section" id="how-it-works">
       <div class="container">
         <p class="eyebrow reveal">How it works</p>
-        <h2 class="reveal">From a repo to a live stack</h2>
+        <h2 class="reveal">Four steps. Analyze first.</h2>
+        <p class="section-lead reveal">
+          The customer path is the portal you will use: paste, review, approve, watch.
+          Nothing is created until you approve the plan.
+        </p>
         <figure class="diagram scale-chart" data-diagram>
           <div class="scale-board">
-            <ol class="scale-flow">
+            <ol class="scale-flow scale-flow--4">
               <li class="scale-node" style="--i: 0">
-                <span class="scale-icon">
-                  <svg viewBox="0 0 64 64" aria-hidden="true">
-                    <rect x="14" y="10" width="36" height="44" rx="6" fill="#8f6bf5"/>
-                    <circle cx="32" cy="26" r="7" fill="#171329"/>
-                    <path d="M24 42c3-5 13-5 16 0" fill="none" stroke="#171329" stroke-width="2.4" stroke-linecap="round"/>
-                  </svg>
-                </span>
-                <strong class="scale-cap">Connect</strong>
-                <span class="scale-sub">A public GitHub repo</span>
-              </li>
-              <li class="scale-node" style="--i: 1">
                 <span class="scale-icon">
                   <svg viewBox="0 0 64 64" aria-hidden="true">
                     <rect x="10" y="14" width="26" height="32" rx="4" fill="#171329" stroke="#3a3260" stroke-width="1.6"/>
@@ -275,10 +342,10 @@ in your account</code></pre>
                     <path class="scan-arc" d="M32 38h15" fill="none" stroke="#ffd27f" stroke-width="2" stroke-linecap="round"/>
                   </svg>
                 </span>
-                <strong class="scale-cap">Scan</strong>
-                <span class="scale-sub">Read the codebase</span>
+                <strong class="scale-cap">1. Paste the repo</strong>
+                <span class="scale-sub">Public GitHub URL on /analyze</span>
               </li>
-              <li class="scale-node" style="--i: 2">
+              <li class="scale-node" style="--i: 1">
                 <span class="scale-icon">
                   <svg viewBox="0 0 64 64" aria-hidden="true">
                     <path d="M20 22L34 30M44 22L34 30M20 44L34 34" stroke="#413a66" stroke-width="1.4" stroke-dasharray="2 3"/>
@@ -301,10 +368,10 @@ in your account</code></pre>
                     <path class="ok-tick" d="M47 46l2.2 2.2 4-4.4" fill="none" stroke="#f6b64a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </span>
-                <strong class="scale-cap">Plan</strong>
-                <span class="scale-sub">You approve before create</span>
+                <strong class="scale-cap">2. Review the plan</strong>
+                <span class="scale-sub">Evidence, diagram, cost</span>
               </li>
-              <li class="scale-node" style="--i: 3">
+              <li class="scale-node" style="--i: 2">
                 <span class="scale-icon">
                   <svg viewBox="0 0 64 64" aria-hidden="true">
                     <path d="M16 40c-6 0-10-4.6-10-10 0-5 3.6-9 8.4-9.8C16 14 21 10 27 10c6.6 0 12 4.6 13.4 10.8C46 21.6 50 26 50 31c0 5-4 9-9 9z" fill="#8f6bf5"/>
@@ -313,10 +380,10 @@ in your account</code></pre>
                     <rect class="cloud-drop" x="23" y="38" width="11" height="2" rx="1" fill="#b19dff"/>
                   </svg>
                 </span>
-                <strong class="scale-cap">Your cloud</strong>
-                <span class="scale-sub">Then you connect the account</span>
+                <strong class="scale-cap">3. Approve and provision</strong>
+                <span class="scale-sub">Guardrails on by default</span>
               </li>
-              <li class="scale-node scale-node--ok" style="--i: 4">
+              <li class="scale-node scale-node--ok" style="--i: 3">
                 <span class="scale-icon">
                   <svg viewBox="0 0 64 64" aria-hidden="true">
                     <path d="M32 8l18 6v14c0 12-7.6 20.6-18 26-10.4-5.4-18-14-18-26V14z" fill="#f6b64a" opacity="0.16"/>
@@ -324,8 +391,8 @@ in your account</code></pre>
                     <path class="ok-tick" d="M22 32l7 7 14-16" fill="none" stroke="#ffd27f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </span>
-                <strong class="scale-cap">Load test</strong>
-                <span class="scale-sub">Traffic before launch</span>
+                <strong class="scale-cap">4. Watch the dashboard</strong>
+                <span class="scale-sub">Live resources + load proof</span>
               </li>
             </ol>
           </div>
@@ -335,11 +402,12 @@ in your account</code></pre>
 
     <section class="section section-alt" id="account">
       <div class="container">
-        <p class="eyebrow reveal">In your account</p>
-        <h2 class="reveal">You keep your cloud. We run the control plane.</h2>
+        <p class="eyebrow reveal">Your cloud</p>
+        <h2 class="reveal">Your resources live in your account.</h2>
         <p class="section-lead reveal">
-          The account stays yours. Infra runs inside AWS, GCP, or Azure, on your bill.
-          We never take the account. You grant a role only after you approve a plan.
+          We don’t ask you to learn our control plane. You get outcomes and evidence.
+          Infra runs inside AWS, GCP, or Azure, on your bill. You grant a scoped
+          role only after you approve a plan.
         </p>
 
         <figure class="diagram" data-diagram>
@@ -358,8 +426,8 @@ in your account</code></pre>
                 <path d="M72 43h7M75.5 39.5v7" stroke="#241804" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
               <p class="own-label">Yours</p>
-              <h3>Your cloud</h3>
-              <p>Compute, data, and caches stay inside AWS, GCP, or Azure, under your billing.</p>
+              <h3>Your cloud account</h3>
+              <p>Compute, data, and caches stay inside AWS, GCP, or Azure, under your billing. If you leave, they stay.</p>
               <ul class="own-res-list">
                 <li class="own-res own-res--db"><span>Database</span></li>
                 <li class="own-res own-res--box"><span>Compute</span></li>
@@ -376,16 +444,16 @@ in your account</code></pre>
                 <rect x="84" y="38" width="16" height="14" rx="2.5" fill="#ffd27f"/>
                 <path d="M88 45h8" stroke="#241804" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
-              <p class="own-label">Ours</p>
-              <h3>Strata control plane</h3>
-              <p>Provisioning, state files, and scaling policies. We send instructions in. We never take the account.</p>
+              <p class="own-label">What you see</p>
+              <h3>Outcomes and evidence</h3>
+              <p>A plan, live status, and proof. Policy-driven provisioning in your account, with guardrails at creation time. Not a second console to learn.</p>
             </div>
           </div>
         </figure>
 
         <p class="model-note reveal">
-          You pay your cloud provider for what you use. You pay Strata to stand it up
-          and load-test it.
+          You pay your cloud provider for what you use. You pay Strata to plan,
+          stand it up, and keep desired / actual / proof in sync — a fraction of one FTE.
         </p>
 
         <div class="trust-grid">
@@ -394,8 +462,8 @@ in your account</code></pre>
             <p>A scoped role that can create and manage the services in the approved plan. We do not become the account owner. We do not need your application data or your users&rsquo; data.</p>
           </article>
           <article class="trust-card reveal">
-            <h3>What &ldquo;we infer&rdquo; means</h3>
-            <p>If <code>package.json</code> depends on <code>pg</code>, the plan says PostgreSQL and cites the file that caused it. Nothing is created until you approve that plan and connect the account.</p>
+            <h3>What “we infer” means</h3>
+            <p>If <code>package.json</code> depends on <code>pg</code>, the plan says PostgreSQL and cites the file that caused it. If we cannot provision something yet, the plan says so. Nothing is created until you approve.</p>
           </article>
           <article class="trust-card reveal">
             <h3>If you leave</h3>
@@ -405,65 +473,194 @@ in your account</code></pre>
 
         <aside class="trust-note reveal">
           <p><strong>What we read today.</strong> JavaScript, TypeScript, and Python. Other languages get a thin plan rather than a guessed one.</p>
-          <p><strong>Where it lands.</strong> Your AWS, GCP, or Azure account &mdash; you tell us which. Connecting the cloud is a later step, after the plan.</p>
+          <p><strong>Where it lands.</strong> Your AWS, GCP, or Azure account — you tell us which. Connecting the cloud is a later step, after the plan.</p>
         </aside>
       </div>
     </section>
 
     <section class="section" id="tiers">
       <div class="container">
-        <p class="eyebrow reveal">Who we serve</p>
-        <h2 class="reveal">Built for teams at every stage</h2>
+        <p class="eyebrow reveal">Tiers</p>
+        <h2 class="reveal">A fraction of one platform hire. Usage-based as you grow.</h2>
         <p class="section-lead reveal">
-          From startups shipping fast to enterprises with compliance requirements,
-          Strata scales with your needs.
+          Move between tiers without throwing away the plan. Cloud spend is billed
+          by your provider. Strata starts at $500 / month.
         </p>
+
+        <div class="tier-table-wrap reveal">
+          <table class="tier-table">
+            <caption class="sr-only">Strata tier comparison</caption>
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Lightweight</th>
+                <th scope="col" class="is-featured">Standard</th>
+                <th scope="col">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Who it’s for</th>
+                <td>1K–10K monthly active users</td>
+                <td>10K–100K MAU</td>
+                <td>100K+ MAU or strict mandates</td>
+              </tr>
+              <tr>
+                <th scope="row">Infrastructure</th>
+                <td>Container + managed Postgres + DNS</td>
+                <td>Managed Kubernetes + multi-service + private network</td>
+                <td>Multi-region + geo-replicated data + dedicated egress</td>
+              </tr>
+              <tr>
+                <th scope="row">Compliance posture</th>
+                <td>Basic audit readiness: encryption at rest, logs, change tracking</td>
+                <td>SOC 2-ready guardrails enforced + quarterly evidence packages</td>
+                <td>HIPAA / PCI-DSS control enforcement + BAA support + advisory</td>
+              </tr>
+              <tr>
+                <th scope="row">Uptime</th>
+                <td>99.5% best effort</td>
+                <td>99.9% with incident response</td>
+                <td>99.95% with 24/7 support + DR runbooks</td>
+              </tr>
+              <tr>
+                <th scope="row">Monthly starting price</th>
+                <td><strong>$500</strong></td>
+                <td><strong>$2,500</strong></td>
+                <td><strong>Custom</strong> (starts $10K+)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <div class="tiers-grid">
           <article class="tier-card reveal">
-            <h3 class="tier-name">Startups</h3>
-            <p class="tier-desc">Ship faster without hiring a platform team</p>
+            <h3 class="tier-name">Lightweight</h3>
+            <p class="tier-price">$500<span>/mo</span></p>
+            <p class="tier-desc">Audit-ready from day one, without Kubernetes complexity.</p>
             <ul class="tier-features">
-              <li>One-click infrastructure provisioning</li>
-              <li>Load testing before launch</li>
-              <li>AWS, GCP, or Azure support</li>
-              <li>Community support</li>
+              <li>1K–10K MAU, single-service apps</li>
+              <li>Container + managed database + DNS</li>
+              <li>Encryption, logs, and change tracking on</li>
+              <li>Best for first compliance questions</li>
             </ul>
+            <a class="btn btn-solid btn-block tier-cta" href="#how-it-works" data-portal-path="/analyze" data-event="tier1_cta">Get started — $500/month</a>
           </article>
           <article class="tier-card tier-card--highlight reveal">
-            <h3 class="tier-name">Growth</h3>
-            <p class="tier-desc">Scale confidently as your product grows</p>
+            <h3 class="tier-name">Standard</h3>
+            <p class="tier-price">$2,500<span>/mo</span></p>
+            <p class="tier-desc">SOC 2-ready infrastructure with enforced private networking.</p>
             <ul class="tier-features">
-              <li>Everything in Startups</li>
-              <li>Auto-scaling policies</li>
-              <li>Multi-environment support</li>
-              <li>Priority support</li>
-              <li>Custom load test scenarios</li>
+              <li>10K–100K MAU, multi-service</li>
+              <li>Private network + enforced guardrails</li>
+              <li>Quarterly evidence packages</li>
+              <li>99.9% with incident response</li>
             </ul>
+            <a class="btn btn-solid btn-block tier-cta" href="#review" data-event="book_review_click">Schedule SOC 2 readiness review</a>
           </article>
           <article class="tier-card reveal">
             <h3 class="tier-name">Enterprise</h3>
-            <p class="tier-desc">Compliance-ready infrastructure at scale</p>
+            <p class="tier-price">$10K+<span>/mo</span></p>
+            <p class="tier-desc">Enterprise compliance controls with dedicated advisory.</p>
             <ul class="tier-features">
-              <li>Everything in Growth</li>
-              <li>SOC 2 Type II compliance</li>
-              <li>HIPAA and GDPR ready</li>
-              <li>Custom SLAs</li>
-              <li>Dedicated support</li>
-              <li>On-premise control plane option</li>
+              <li>100K+ MAU or contract-driven controls</li>
+              <li>Multi-region + geo-replicated data</li>
+              <li>HIPAA / PCI-DSS control enforcement</li>
+              <li>BAA support and 24/7 coverage</li>
+            </ul>
+            <a class="btn btn-ghost btn-block tier-cta" href="#review" data-event="book_review_click">Talk to compliance engineering</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="fit">
+      <div class="container">
+        <p class="eyebrow reveal">Who this is for</p>
+        <h2 class="reveal">Built for teams with users, revenue, and pressure.</h2>
+        <p class="section-lead reveal">
+          We optimize for post-traction teams. If that’s not you yet, stay on a
+          managed host until compliance or scale is real.
+        </p>
+
+        <div class="fit-grid">
+          <article class="fit-card fit-card--yes reveal">
+            <h3>This is for you if</h3>
+            <ul>
+              <li>You have 1,000+ monthly active users in production</li>
+              <li>A customer, investor, or buyer asked whether you are SOC 2 ready — and you need a credible answer</li>
+              <li>You want to ship features, not spend months becoming infrastructure specialists</li>
+              <li>You will pay for infrastructure that is audit-ready by default</li>
+            </ul>
+          </article>
+          <article class="fit-card fit-card--no reveal">
+            <h3>This is not for you if</h3>
+            <ul>
+              <li>You are pre-launch or still finding product-market fit — use Vercel, Railway, or Render</li>
+              <li>You want the cheapest possible hosting</li>
+              <li>You already have a platform team and want to own every file</li>
+              <li>You need a vendor to certify you. Auditors certify customers. We provide evidence.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
+    <section class="section" id="build">
+      <div class="container">
+        <p class="eyebrow reveal">Build vs buy</p>
+        <h2 class="reveal">Hire when you must. Don’t buy a second product first.</h2>
+        <p class="section-lead reveal">
+          At enough scale, platform engineering pays off. Before that, you are
+          paying a full salary for build, operate, and audit prep. We cover operate
+          and evidence from day one, at a fraction of one FTE.
+        </p>
+
+        <div class="tier-table-wrap reveal">
+          <table class="tier-table buy-table">
+            <caption class="sr-only">Hiring platform engineering versus Strata</caption>
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Hire platform / DevOps</th>
+                <th scope="col" class="is-featured">Strata</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Time to audit-credible prod</th>
+                <td>Often 3–9 months</td>
+                <td>Days to weeks: plan → provision → dashboard</td>
+              </tr>
+              <tr>
+                <th scope="row">Ongoing cost</th>
+                <td>$150k–220k+ loaded, plus tools and on-call</td>
+                <td>$500–$2,500 / mo for most teams; Enterprise when contracts demand it</td>
+              </tr>
+              <tr>
+                <th scope="row">Bus factor</th>
+                <td>One person’s runbooks</td>
+                <td>Productized operations</td>
+              </tr>
+              <tr>
+                <th scope="row">Growth path</th>
+                <td>Re-architect or hire more</td>
+                <td>Tier upgrades without rewriting the plan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="model-note reveal">No ROI spreadsheet. Those are the published anchors. Cloud usage is extra, on your bill.</p>
+      </div>
+    </section>
+
     <section class="section section-alt" id="compliance">
       <div class="container">
-        <p class="eyebrow reveal">Security &amp; Compliance</p>
-        <h2 class="reveal">Enterprise-grade compliance from day one</h2>
+        <p class="eyebrow reveal">Evidence</p>
+        <h2 class="reveal">We provide evidence. Your auditor certifies you.</h2>
         <p class="section-lead reveal">
-          Your infrastructure needs to meet regulatory standards. Strata provisions
-          compliant resources automatically, so you can focus on building.
+          Guardrails are enforced at creation. You bring the trail to your auditor.
+          We never promise a certification date.
         </p>
 
         <div class="compliance-grid">
@@ -473,8 +670,16 @@ in your account</code></pre>
               <path d="M32 8l18 6v14c0 12-7.6 20.6-18 26-10.4-5.4-18-14-18-26V14z" fill="none" stroke="#f6b64a" stroke-width="2"/>
               <path d="M22 32l7 7 14-16" fill="none" stroke="#ffd27f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <h3>SOC 2 Type II</h3>
-            <p>Annual audits verify our security, availability, and confidentiality controls. Your data is protected.</p>
+            <h3>Enforced at creation</h3>
+            <p>Encryption at rest, private networking, and audit logging are required when the resource is created — not left as optional toggles.</p>
+          </article>
+          <article class="compliance-card reveal">
+            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="18" width="36" height="28" rx="4" fill="#171329" stroke="#b19dff" stroke-width="2"/>
+              <path d="M22 28h20M22 34h20M22 40h14" stroke="#b19dff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h3>Change trail</h3>
+            <p>Every approved plan and infrastructure change is recorded. You can show who approved what, and when it landed.</p>
           </article>
           <article class="compliance-card reveal">
             <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
@@ -483,57 +688,34 @@ in your account</code></pre>
               <circle cx="32" cy="34" r="6" fill="none" stroke="#b19dff" stroke-width="2"/>
               <path d="M32 40v4" stroke="#b19dff" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <h3>HIPAA Ready</h3>
-            <p>Business Associate Agreements and encryption at rest ensure your healthcare data meets HIPAA requirements.</p>
+            <h3>Control mappings</h3>
+            <p>We document which infrastructure controls map to common SOC 2, HIPAA, and PCI-DSS requirements so your auditor is not starting from a blank page.</p>
           </article>
           <article class="compliance-card reveal">
             <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <circle cx="32" cy="32" r="22" fill="none" stroke="#f6b64a" stroke-width="2"/>
-              <circle cx="32" cy="26" r="6" fill="#ffd27f"/>
-              <path d="M20 46c3-6 8-8 12-8s9 2 12 8" fill="none" stroke="#ffd27f" stroke-width="2.4" stroke-linecap="round"/>
+              <rect x="12" y="16" width="40" height="32" rx="4" fill="#171329" stroke="#f6b64a" stroke-width="2"/>
+              <path d="M20 28h24M20 36h18" stroke="#f6b64a" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <h3>GDPR Compliant</h3>
-            <p>Data residency controls, audit logs, and right-to-deletion tooling built in for European customers.</p>
-          </article>
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="14" y="18" width="36" height="28" rx="4" fill="#171329" stroke="#b19dff" stroke-width="2"/>
-              <path d="M22 28h20M22 34h20M22 40h14" stroke="#b19dff" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <h3>Audit Logs</h3>
-            <p>Every provisioning action, configuration change, and access event is logged and tamper-proof.</p>
-          </article>
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M16 40c-6 0-10-4.6-10-10 0-5 3.6-9 8.4-9.8C16 14 21 10 27 10c6.6 0 12 4.6 13.4 10.8C46 21.6 50 26 50 31c0 5-4 9-9 9z" fill="#8f6bf5" opacity="0.22"/>
-              <path d="M16 40c-6 0-10-4.6-10-10 0-5 3.6-9 8.4-9.8C16 14 21 10 27 10c6.6 0 12 4.6 13.4 10.8C46 21.6 50 26 50 31c0 5-4 9-9 9z" fill="none" stroke="#8f6bf5" stroke-width="1.8"/>
-              <rect x="22" y="32" width="14" height="12" rx="2" fill="#f6b64a"/>
-              <path d="M26 37h6" stroke="#241804" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-            <h3>Data Residency</h3>
-            <p>Choose where your infrastructure lives: US, EU, UK, or Asia-Pacific regions for compliance.</p>
-          </article>
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="18" y="16" width="28" height="32" rx="4" fill="#171329" stroke="#f6b64a" stroke-width="2"/>
-              <circle cx="32" cy="28" r="5" fill="#f6b64a"/>
-              <path d="M26 40c2-4 8-4 12 0" fill="none" stroke="#f6b64a" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <h3>SSO & RBAC</h3>
-            <p>Single sign-on with your identity provider and role-based access control for your entire team.</p>
+            <h3>Evidence packages</h3>
+            <p>Standard and Enterprise include packaged evidence — change history, control narrative, and load proof — on a cadence that matches the tier.</p>
           </article>
         </div>
 
         <aside class="compliance-note reveal">
-          <p><strong>Compliance by design.</strong> When you approve an infrastructure plan, Strata provisions resources with encryption, access controls, and audit logging enabled automatically. No manual hardening required.</p>
+          <p><strong>Compliance honesty.</strong> We provide enforced infrastructure controls and audit-ready evidence. Your auditor certifies you. We do not sell a certification date.</p>
         </aside>
       </div>
     </section>
 
-    <section class="section signup-section" id="signup">
+    <section class="section signup-section" id="review">
       <div class="container signup-inner">
-        <h2 class="reveal">Ready to bring it to life?</h2>
-        <p class="reveal">Request early access. We&rsquo;ll scan your first project and stand the infra up in your cloud.</p>
+        <p class="eyebrow reveal">Next step</p>
+        <h2 class="reveal">Book a 20-minute infrastructure review</h2>
+        <p class="reveal">Send the repo. We’ll map it to a tier and show what audit-ready evidence looks like. Or paste it yourself — no signup required.</p>
+
+        <div class="review-actions reveal">
+          <a class="btn btn-ghost hero-btn" href="#how-it-works" data-portal-path="/analyze" data-event="analyze_click">Analyze your repository</a>
+        </div>
 
         <form id="signup-form" class="signup-form reveal" novalidate>
           <div class="form-row">
@@ -545,8 +727,12 @@ in your account</code></pre>
             <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
           <div class="form-row">
-            <label for="company">Company or project</label>
+            <label for="company">Company</label>
             <input type="text" id="company" name="company" autocomplete="organization" required placeholder="Company name">
+          </div>
+          <div class="form-row">
+            <label for="repo">Public GitHub repo <span class="optional">(optional)</span></label>
+            <input type="url" id="repo" name="repo" inputmode="url" placeholder="https://github.com/org/app" autocomplete="off">
           </div>
           <div class="hp" aria-hidden="true">
             <label for="website">Website</label>
@@ -561,10 +747,10 @@ in your account</code></pre>
               <option value="other">Other</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-solid btn-block hero-btn">Request early access</button>
+          <button type="submit" class="btn btn-solid btn-block hero-btn">Book the review</button>
         </form>
         <p id="signup-success" class="signup-success" role="status" hidden>
-          Thanks. We&rsquo;ll be in touch shortly.
+          Thanks. We’ll reply with a time and, if you sent a repo, a first-pass plan.
         </p>
       </div>
     </section>
@@ -580,12 +766,15 @@ in your account</code></pre>
         </svg>
         Strata
       </span>
-      <p>&copy; 2026 Strata. You build it. We bring it to life.</p>
+      <p class="footer-disclaimer">
+        &copy; 2026 Strata. We provide enforced controls and audit-ready evidence.
+        Your auditor certifies you. Cloud usage is billed by your provider.
+      </p>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#tiers">Tiers</a>
-        <a href="#compliance">Compliance</a>
-        <a href="#account">In your account</a>
-        <a href="#signup">Early access</a>
+        <a href="#compliance">Evidence</a>
+        <a href="#account">Your cloud</a>
+        <a href="#review">Book a review</a>
       </nav>
     </div>
   </footer>
