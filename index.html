@@ -137,11 +137,19 @@
         <p class="eyebrow reveal">See it in 60 seconds</p>
         <h2 class="reveal">Repo in. Plan, diagram, and proof out.</h2>
         <p class="section-lead reveal">
-          The same loop a buyer sees on a first call. No catalog. No internals.
-          A public repo becomes a reviewable plan, then a live dashboard.
+          Paste a public GitHub repo. We read your code and cite evidence — file and line — 
+          to infer what infrastructure you need. You get a labeled architecture diagram, 
+          an approximate cost estimate, and a reviewable plan. Approve it, and we provision 
+          with guardrails on. Then watch your dashboard: desired, actual, and proof in one place.
         </p>
 
-        <figure class="demo-loop reveal" data-diagram data-demo-loop aria-label="Sixty-second product loop">
+        <figure class="demo-loop reveal" data-diagram data-demo-loop aria-label="Four-step product flow from analysis to live proof">
+          <figcaption class="sr-only">
+            Architecture diagram showing the flow from analyzing a repository to viewing a live dashboard. 
+            Step 1: Paste your repo URL. Step 2: Review file-level evidence (e.g., pg in package.json means PostgreSQL). 
+            Step 3: See your inferred architecture diagram with labeled components and cost estimate. 
+            Step 4: Watch live dashboard with ready resources, response times, and error rates (illustrative).
+          </figcaption>
           <div class="demo-screen">
             <div class="demo-chrome">
               <span></span><span></span><span></span>
@@ -155,32 +163,34 @@
             </div>
 
             <div class="demo-frame demo-frame--evidence" data-beat="1">
-              <p class="demo-kicker">Requirement · managed PostgreSQL</p>
+              <p class="demo-kicker">File-level evidence · managed PostgreSQL</p>
               <button class="demo-evidence" type="button" tabindex="-1">
                 <span>Why this exists</span>
-                <code>src/db.ts:14</code>
-                <p><code>import pg from "pg"</code> — primary datastore for checkout sessions.</p>
+                <code>package.json:14</code>
+                <p><code>"pg": "^8.11.0"</code> — primary datastore for checkout sessions.</p>
               </button>
             </div>
 
             <div class="demo-frame demo-frame--diagram" data-beat="2">
-              <p class="demo-kicker">Architecture from the code</p>
-              <svg class="demo-arch" viewBox="0 0 360 140" aria-hidden="true">
+              <p class="demo-kicker">Inferred architecture · labeled diagram + cost</p>
+              <svg class="demo-arch" viewBox="0 0 360 140" aria-label="Architecture diagram showing web service connecting to worker, queue, and postgres" role="img">
+                <title>Architecture Diagram</title>
+                <desc>Web service connects to worker and postgres. Worker connects to queue. Queue connects back to worker.</desc>
                 <rect x="16" y="48" width="88" height="44" rx="8" fill="#8f6bf5"/>
-                <text x="60" y="75" text-anchor="middle" fill="#171329" font-size="12" font-weight="700" font-family="Inter, sans-serif">web</text>
+                <text x="60" y="75" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">web</text>
                 <rect x="136" y="20" width="88" height="44" rx="8" fill="#f6b64a"/>
-                <text x="180" y="47" text-anchor="middle" fill="#241804" font-size="12" font-weight="700" font-family="Inter, sans-serif">worker</text>
+                <text x="180" y="47" text-anchor="middle" fill="#241804" font-size="13" font-weight="700" font-family="Inter, sans-serif">worker</text>
                 <rect x="136" y="76" width="88" height="44" rx="8" fill="#b19dff"/>
-                <text x="180" y="103" text-anchor="middle" fill="#171329" font-size="12" font-weight="700" font-family="Inter, sans-serif">queue</text>
+                <text x="180" y="103" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">queue</text>
                 <rect x="256" y="48" width="88" height="44" rx="8" fill="#ede8fb"/>
-                <text x="300" y="75" text-anchor="middle" fill="#171329" font-size="12" font-weight="700" font-family="Inter, sans-serif">postgres</text>
-                <path d="M104 70h32M180 64v12M224 42h32M224 98h16v-8" fill="none" stroke="#f6b64a" stroke-width="2"/>
+                <text x="300" y="75" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">postgres</text>
+                <path d="M104 70h32M180 64v12M224 42h32M224 98h16v-8" fill="none" stroke="#f6b64a" stroke-width="2" stroke-linecap="round"/>
               </svg>
-              <p class="demo-cost">Est. cloud spend · $186 / mo before provision</p>
+              <p class="demo-cost">Approximate cloud spend · $186 / mo before provision (Azure; AWS/GCP in preview)</p>
             </div>
 
             <div class="demo-frame demo-frame--dash" data-beat="3">
-              <p class="demo-kicker">Dashboard · live resources + load (illustrative)</p>
+              <p class="demo-kicker">Live dashboard · resources + load (illustrative)</p>
               <div class="demo-metrics">
                 <div><strong>Ready</strong><span>12 / 12</span></div>
                 <div><strong>p95</strong><span>142 ms</span></div>
@@ -193,10 +203,10 @@
             </div>
           </div>
           <ol class="demo-beats">
-            <li>Analyze</li>
-            <li>Evidence</li>
-            <li>Diagram</li>
-            <li>Proof</li>
+            <li>1. Paste repo</li>
+            <li>2. Review evidence</li>
+            <li>3. See diagram + cost</li>
+            <li>4. Watch dashboard</li>
           </ol>
         </figure>
       </div>
