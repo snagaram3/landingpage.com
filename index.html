@@ -51,6 +51,7 @@
       <a href="#tiers" class="nav-link appear appear--soft" style="--d: 0.40s">Tiers</a>
       <a href="#fit" class="nav-link appear appear--soft" style="--d: 0.52s">Fit</a>
       <a href="#compliance" class="nav-link appear appear--soft" style="--d: 0.64s">Evidence</a>
+      <a href="#faq" class="nav-link appear appear--soft" style="--d: 0.70s">FAQ</a>
     </nav>
 
     <div class="header-end">
@@ -704,6 +705,90 @@ controls      on</code></pre>
         <aside class="compliance-note reveal">
           <p><strong>Compliance honesty.</strong> We provide enforced infrastructure controls and audit-ready evidence. Your auditor certifies you. We do not sell a certification date.</p>
         </aside>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 class="reveal">Questions teams ask before they paste a repo.</h2>
+        <div class="faq-list">
+          <h3 class="faq-group">Getting started</h3>
+            <details class="faq-item reveal">
+              <summary>What is Strata?</summary>
+              <p>Strata turns your GitHub repo into audit-ready production infrastructure. Paste a repo, review an evidence-backed plan, approve it, and we provision with guardrails on and keep desired, actual and proof in sync — without a platform hire.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Who is Strata for?</summary>
+              <p>Post-traction teams with 1,000+ monthly active users, especially if a customer, investor or buyer has asked whether you're SOC 2 ready. If you're pre-launch or still finding product-market fit, a managed host like Vercel, Railway or Render is a better fit for now.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Do I need to sign up to see a plan?</summary>
+              <p>No. Paste a public GitHub repo and you'll get a plan with no signup. You can also book a 20-minute infrastructure review.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Which languages do you support?</summary>
+              <p>Today we read JavaScript, TypeScript and Python. Other languages get a thin plan rather than a guessed one.</p>
+            </details>
+          <h3 class="faq-group">How it works</h3>
+            <details class="faq-item reveal">
+              <summary>What happens after I paste my repo?</summary>
+              <p>Four steps: paste the repo, review the plan (evidence, diagram, cost), approve and provision with guardrails on by default, then watch live resources and load proof on your dashboard.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>How do you decide what infrastructure I need?</summary>
+              <p>We infer it from your code and cite the file that caused it. For example, if package.json depends on pg, the plan says PostgreSQL and points to that file. If we can't provision something yet, the plan says so.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Will anything be created without my approval?</summary>
+              <p>No. Nothing is created until you approve the plan.</p>
+            </details>
+          <h3 class="faq-group">Security and access</h3>
+            <details class="faq-item reveal">
+              <summary>What access do you need to my cloud account?</summary>
+              <p>A scoped role that can create and manage the services in your approved plan, granted only after you approve. We don't become the account owner. Under the hood, access uses a federated trust chain (AWS role assumption, Azure managed identity, GCP service-account impersonation); we don't create or store long-lived static credentials for your account.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Do you access my application or user data?</summary>
+              <p>No. We don't need your application data or your users' data.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Are my environments kept separate from other customers?</summary>
+              <p>Yes. Each client is onboarded with its own provider configuration and credentials scoped to its own cloud account.</p>
+            </details>
+          <h3 class="faq-group">Clouds supported</h3>
+            <details class="faq-item reveal">
+              <summary>Which clouds do you support?</summary>
+              <p>AWS, Google Cloud and Azure. Your infrastructure runs in your own account, on your bill. You tell us which cloud; connecting it is a step after the plan.</p>
+            </details>
+          <h3 class="faq-group">Pricing and tiers</h3>
+            <details class="faq-item reveal">
+              <summary>How much does Strata cost?</summary>
+              <p>Lightweight starts at $500/month (1K–10K MAU), Standard at $2,500/month (10K–100K MAU), and Enterprise is custom, starting at $10K+/month (100K+ MAU or strict mandates).</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Is cloud spend included?</summary>
+              <p>No. You pay your cloud provider directly for what you use. You pay Strata to plan, stand it up and keep it in sync.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Can I change tiers later?</summary>
+              <p>Yes. You can move between tiers without throwing away your plan.</p>
+            </details>
+          <h3 class="faq-group">Support and scaling</h3>
+            <details class="faq-item reveal">
+              <summary>What uptime and support do I get?</summary>
+              <p>Lightweight: 99.5% best effort. Standard: 99.9% with incident response. Enterprise: 99.95% with 24/7 support and DR runbooks.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Will Strata make me SOC 2 / HIPAA / PCI compliant?</summary>
+              <p>We provide enforced infrastructure controls (encryption at rest, private networking, audit logging at creation), a change trail, control mappings, and — on Standard and Enterprise — packaged evidence. Your auditor certifies you; we never promise a certification date.</p>
+            </details>
+          <h3 class="faq-group">Data and offboarding</h3>
+            <details class="faq-item reveal">
+              <summary>What happens if I leave?</summary>
+              <p>Your infrastructure stays in your account, on your bill, and you can keep running it without us. We don't hold your data hostage.</p>
+            </details>
+        </div>
       </div>
     </section>
 

@@ -2990,3 +2990,13 @@ html.js .reveal.is-visible {
     max-height: none !important;
   }
 }
+
+/* FAQ */
+.faq-list { max-width: 760px; margin-top: 2rem; }
+.faq-group { margin: 2rem 0 .75rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
+.faq-item { border-bottom: 1px solid rgba(127,127,127,.25); padding: 1rem 0; }
+.faq-item summary { cursor: pointer; font-weight: 600; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; float: right; }
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { margin: .75rem 0 0; }
