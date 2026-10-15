@@ -1,6 +1,6 @@
-# Strata. Audit-ready infra from your repo.
+# Alineplane. Audit-ready infra from your repo.
 
-Landing page for Strata, an Internal Developer Platform. It sells the
+Landing page for Alineplane, an Internal Developer Platform. It sells the
 customer-visible loop: analyze a GitHub repo, review an evidence-backed plan,
 provision with guardrails, and keep desired / actual / proof in sync.
 
@@ -41,4 +41,4 @@ python3 -m http.server 8000
 - Sign-up forms POST `{ name, email, company, cloud, source, pageUrl }` to
   `SIGNUP_ENDPOINT` in `js/main.js`. Set that to the Apps Script web-app URL
   (see the `_IDP` repo `docs/LEADS.md`). Until it is set, submit shows an error.
-- Product name ("Strata") is a placeholder.
+- Product name ("Alineplane") was formerly a placeholder.
