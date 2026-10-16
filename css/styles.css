@@ -628,10 +628,25 @@ html.js .reveal {
     transform 0.6s ease-out var(--reveal-d, 0s);
 }
 
-.reveal.is-visible,
 html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Fallback: ensure reveals are visible after a timeout even if observer fails */
+html.js .reveal {
+  animation: reveal-fallback 0.6s ease-out 1.5s forwards;
+}
+
+html.js .reveal.is-visible {
+  animation: none;
+}
+
+@keyframes reveal-fallback {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Lower sections */
