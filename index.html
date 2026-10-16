@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
   <style>html, body { background: #0F1A17 !important; color: #F2EDE3; }</style>
   <script>document.documentElement.classList.add("js");</script>
   <noscript><style>.appear,.reveal{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
@@ -214,7 +215,7 @@
                 <text x="300" y="75" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">postgres</text>
                 <path d="M104 70h32M180 64v12M224 42h32M224 98h16v-8" fill="none" stroke="#f6b64a" stroke-width="2" stroke-linecap="round"/>
               </svg>
-              <p class="demo-cost">Approximate cloud spend · $186 / mo before provision (Azure; AWS/GCP in preview)</p>
+              <p class="demo-cost">Approximate cloud spend · $<span data-counter="186" data-counter-prefix="$">186</span> / mo before provision (Azure; AWS/GCP in preview)</p>
             </div>
 
             <div class="demo-frame demo-frame--dash" data-beat="3">
@@ -903,5 +904,6 @@ controls      on</code></pre>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
