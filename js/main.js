@@ -320,7 +320,6 @@ const PORTAL_ORIGIN = "";
     setupParallax();
     setupScrollSpy();
     setupDiagrams();
-    setupVideoPlayer();
   });
 
   function setupDiagrams() {
@@ -341,29 +340,5 @@ const PORTAL_ORIGIN = "";
       { threshold: 0.35 }
     );
     diagrams.forEach((el) => observer.observe(el));
-  }
-
-  function setupVideoPlayer() {
-    const facades = document.querySelectorAll(".video-facade");
-    if (!facades.length) return;
-
-    facades.forEach((facade) => {
-      facade.addEventListener("click", () => {
-        const videoId = facade.getAttribute("data-video-id");
-        if (!videoId) return;
-
-        const iframe = document.createElement("iframe");
-        iframe.setAttribute("src", `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`);
-        iframe.setAttribute("title", "Alineplane demo");
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-        iframe.setAttribute("allowfullscreen", "");
-        iframe.setAttribute("loading", "lazy");
-
-        facade.replaceWith(iframe);
-
-        track("video_play", { video_id: videoId });
-      });
-    });
   }
 })();
