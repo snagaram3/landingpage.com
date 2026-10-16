@@ -161,9 +161,9 @@ svg {
 }
 
 .header.is-solid {
-  background: rgba(250, 250, 248, 0.95);
-  color: var(--text);
-  box-shadow: 0 1px 0 var(--border);
+  background: rgba(15, 26, 23, 0.98);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -3045,6 +3045,12 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .container {
+  max-width: 900px;
 }
 
 .hero h1 {
@@ -3062,7 +3068,7 @@ h3 {
   line-height: 1.7;
   color: var(--muted);
   max-width: 650px;
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem;
 }
 
 .badge {
@@ -3077,6 +3083,13 @@ h3 {
   letter-spacing: 0.05em;
   margin-bottom: 2rem;
   color: var(--sage);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Stats */
