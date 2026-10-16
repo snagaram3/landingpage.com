@@ -11,6 +11,14 @@ provision with guardrails, and keep desired / actual / proof in sync.
 - **Tiers:** Lightweight $500 / Standard $2,500 / Enterprise $10K+.
 - **Review form:** name, work email, company, optional repo, cloud provider.
 
+## Design
+
+Forest / cream / copper, typography-led: Inter Tight for UI, a Fraunces italic
+accent word, JetBrains Mono only inside product snippets. Hairline borders, no
+shadows-as-decoration, one quiet hero light source, fade-up reveals that respect
+`prefers-reduced-motion`. Colour tokens live on `:root`; `.paper` sections
+re-declare them, so text colour always follows its surface.
+
 ## Stack
 
 Plain HTML/CSS/JS. No build step, no dependencies.
@@ -38,6 +46,9 @@ python3 -m http.server 8000
 
 ## Notes
 
+- The hero "Get my plan" field validates a GitHub URL. With a portal origin set
+  (`PORTAL_ORIGIN` in `js/main.js` or `<meta name="alineplane-portal">`) it opens
+  `<portal>/analyze?repo=…`; until then it carries the repo into the review form.
 - Sign-up forms POST `{ name, email, company, cloud, source, pageUrl }` to
   `SIGNUP_ENDPOINT` in `js/main.js`. Set that to the Apps Script web-app URL
   (see the `_IDP` repo `docs/LEADS.md`). Until it is set, submit shows an error.

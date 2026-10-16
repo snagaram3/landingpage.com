@@ -5,10 +5,94 @@
  */
 const SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbwyi_qurfZS4Ny6D4klfi8mFqtb6paxybg7CeMZSI3MvpDW3w5-TAGc8ovOJBnSbOZ2YQ/exec";
 
-/** Production portal origin, e.g. "https://app.example.com". Empty keeps in-page anchors. */
+/**
+ * Production portal origin, e.g. "https://app.example.com". While empty, the
+ * hero "Get my plan" form hands the repo to the review form below instead.
+ * Can also be set without editing JS via <meta name="alineplane-portal">.
+ */
 const PORTAL_ORIGIN = "";
 
 (function () {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Analytics ------------------------------------------------------------ */
+
+  function track(eventName, extra) {
+    const payload = Object.assign({ event: eventName }, extra || {});
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, extra || {});
+    }
+  }
+
+  function setupAnalyticsClicks() {
+    document.addEventListener("click", (event) => {
+      const target = event.target.closest("[data-event]");
+      if (!target || target.type === "submit") return;
+      track(target.getAttribute("data-event"), {
+        href: target.getAttribute("href") || "",
+        label: (target.textContent || "").trim(),
+      });
+    });
+  }
+
+  /* Portal --------------------------------------------------------------- */
+
+  function portalOrigin() {
+    if (PORTAL_ORIGIN) return PORTAL_ORIGIN.replace(/\/$/, "");
+    const meta = document.querySelector('meta[name="alineplane-portal"]');
+    const fromMeta = meta && meta.getAttribute("content");
+    return fromMeta ? fromMeta.replace(/\/$/, "") : "";
+  }
+
+  /** Accepts "github.com/org/app", "https://github.com/org/app(.git)", etc. */
+  function normalizeRepo(raw) {
+    const value = String(raw || "").trim().replace(/\/+$/, "").replace(/\.git$/, "");
+    const match = value.match(/^(?:https?:\/\/)?(?:www\.)?github\.com\/([\w.-]+)\/([\w.-]+)$/i);
+    return match ? `https://github.com/${match[1]}/${match[2]}` : "";
+  }
+
+  function setupRepoForm() {
+    const form = document.getElementById("repo-form");
+    if (!form) return;
+    const input = form.querySelector("input");
+
+    input.addEventListener("input", () => {
+      input.setCustomValidity("");
+      form.classList.remove("is-invalid");
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const repo = normalizeRepo(input.value);
+      if (!repo) {
+        form.classList.add("is-invalid");
+        input.setCustomValidity("Enter a public GitHub repo, like github.com/your-org/your-app");
+        input.reportValidity();
+        return;
+      }
+
+      track("analyze_click", { repo });
+
+      const origin = portalOrigin();
+      const path = form.getAttribute("data-portal-path") || "/analyze";
+      if (origin) {
+        window.location.href = `${origin}${path}?repo=${encodeURIComponent(repo)}`;
+        return;
+      }
+
+      // No hosted analyzer yet: carry the repo into the review form.
+      const reviewRepo = document.getElementById("repo");
+      const name = document.getElementById("name");
+      if (reviewRepo) reviewRepo.value = repo;
+      document.getElementById("review").scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
+      if (name) window.setTimeout(() => name.focus({ preventScroll: true }), reducedMotion ? 0 : 600);
+    });
+  }
+
+  /* Lead form ------------------------------------------------------------ */
+
   function payloadFromForm(form, source) {
     const data = new FormData(form);
     return {
@@ -50,197 +134,142 @@ const PORTAL_ORIGIN = "";
       body: JSON.stringify(payloadFromForm(form, source)),
     });
     if (!response.ok && response.type !== "opaque") {
-      throw new Error("Could not send that sign-up. Try again in a moment.");
+      throw new Error("Could not send that request. Try again in a moment.");
     }
   }
 
-  function handleSignupSubmit(form, source, onSuccess) {
+  function setupSignupForm() {
+    const form = document.getElementById("signup-form");
+    const success = document.getElementById("signup-success");
+    if (!form || !success) return;
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      if (isHoneypotFilled(form)) {
-        onSuccess(form);
-        return;
-      }
+      const done = () => {
+        track("book_review_submit");
+        form.hidden = true;
+        success.hidden = false;
+      };
+      if (isHoneypotFilled(form)) return done();
 
       const button = form.querySelector("button[type='submit']");
       if (button) button.disabled = true;
       try {
-        await submitLead(form, source);
-        onSuccess(form);
+        await submitLead(form, "book_review");
+        done();
       } catch (err) {
-        showFormError(form, err instanceof Error ? err.message : "Could not send that sign-up.");
+        showFormError(form, err instanceof Error ? err.message : "Could not send that request.");
         if (button) button.disabled = false;
       }
     });
   }
 
-  function track(eventName, extra) {
-    const payload = Object.assign({ event: eventName }, extra || {});
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(payload);
-    if (typeof window.gtag === "function") {
-      window.gtag("event", eventName, extra || {});
-    }
-  }
+  /* Video facade: load YouTube only when asked --------------------------- */
 
-  function portalOrigin() {
-    if (PORTAL_ORIGIN) return PORTAL_ORIGIN.replace(/\/$/, "");
-    const meta = document.querySelector('meta[name="strata-portal"]');
-    const fromMeta = meta && meta.getAttribute("content");
-    return fromMeta ? fromMeta.replace(/\/$/, "") : "";
-  }
-
-  function setupPortalLinks() {
-    const origin = portalOrigin();
-    document.querySelectorAll("[data-portal-path]").forEach((link) => {
-      const path = link.getAttribute("data-portal-path");
-      if (!origin || !path) return;
-      link.setAttribute("href", `${origin}${path.startsWith("/") ? path : `/${path}`}`);
-    });
-  }
-
-  function setupAnalyticsClicks() {
-    document.addEventListener("click", (event) => {
-      const target = event.target.closest("[data-event]");
-      if (!target) return;
-      track(target.getAttribute("data-event"), {
-        href: target.getAttribute("href") || "",
-        label: (target.textContent || "").trim(),
+  function setupVideo() {
+    document.querySelectorAll("[data-video]").forEach((facade) => {
+      facade.addEventListener("click", () => {
+        const id = facade.getAttribute("data-video");
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+        iframe.title = "Alineplane demo";
+        iframe.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        iframe.allowFullscreen = true;
+        facade.replaceWith(iframe);
+        iframe.focus();
       });
     });
   }
 
-  function setupSignupForms() {
-    const heroForm = document.getElementById("hero-signup-form");
-    if (heroForm) {
-      handleSignupSubmit(heroForm, "hero", (form) => {
-        form.innerHTML = '<p class="signup-success" role="status">Thanks. We&rsquo;ll be in touch shortly.</p>';
-      });
-    }
+  /* Motion --------------------------------------------------------------- */
 
-    const signupForm = document.getElementById("signup-form");
-    const signupSuccess = document.getElementById("signup-success");
-    if (signupForm && signupSuccess) {
-      handleSignupSubmit(signupForm, "book_review", () => {
-        track("book_review_submit");
-        signupForm.hidden = true;
-        signupSuccess.hidden = false;
-      });
-    }
-  }
+  function setupReveal() {
+    const els = document.querySelectorAll(".reveal");
+    const plans = document.querySelectorAll("[data-plan]");
+    const showAll = () => {
+      els.forEach((el) => el.classList.add("is-visible"));
+      plans.forEach((el) => el.classList.add("is-playing"));
+    };
+    if (reducedMotion || !("IntersectionObserver" in window)) return showAll();
 
-  function markIn(el) {
-    el.classList.add("is-in");
-  }
-
-  function setupAppear() {
-    const nodes = document.querySelectorAll(".appear");
-    nodes.forEach((el) => {
-      el.addEventListener("animationend", () => markIn(el), { once: true });
-    });
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        const stalled = [...nodes].every((el) => {
-          if (typeof el.getAnimations !== "function") return true;
-          const running = el.getAnimations().some((anim) => {
-            return anim.playState === "running" || anim.playState === "finished";
-          });
-          return !running;
-        });
-        if (stalled) nodes.forEach(markIn);
-      });
-    });
-
-    window.setTimeout(() => nodes.forEach(markIn), 1800);
-  }
-
-  function setupScrollReveal() {
-    const revealEls = document.querySelectorAll(".reveal");
-    if (!revealEls.length) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      revealEls.forEach((el) => el.classList.add("is-visible"));
-      return;
-    }
-
+    // Stagger siblings that enter together.
     const groups = new Map();
-    revealEls.forEach((el) => {
-      const parent = el.parentElement;
-      if (!groups.has(parent)) groups.set(parent, []);
-      groups.get(parent).push(el);
+    els.forEach((el) => {
+      const list = groups.get(el.parentElement) || [];
+      list.push(el);
+      groups.set(el.parentElement, list);
     });
-    groups.forEach((els) => {
-      els.forEach((el, i) => {
-        el.style.setProperty("--reveal-d", `${i * 0.08}s`);
-      });
-    });
+    groups.forEach((list) => list.forEach((el, i) => el.style.setProperty("--reveal-d", `${Math.min(i, 5) * 0.07}s`)));
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          if (el.classList.contains("reveal")) el.classList.add("is-visible");
+          if (el.hasAttribute("data-plan")) el.classList.add("is-playing");
+          observer.unobserve(el);
         });
       },
-      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
+      { rootMargin: "0px 0px -8% 0px" }
     );
+    els.forEach((el) => observer.observe(el));
 
-    revealEls.forEach((el) => observer.observe(el));
+    // Never leave on-screen content hidden if the observer misfires.
+    window.setTimeout(() => {
+      document.querySelectorAll(".reveal:not(.is-visible)").forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add("is-visible");
+          if (el.hasAttribute("data-plan")) el.classList.add("is-playing");
+        }
+      });
+    }, 2500);
   }
 
-  function setupPointerGlow() {
-    if (window.matchMedia("(prefers-reduced-motion: reduce), (pointer: coarse)").matches) {
-      return;
-    }
-    const root = document.documentElement;
-    window.addEventListener(
-      "pointermove",
-      (event) => {
-        root.style.setProperty("--mx", `${event.clientX}px`);
-        root.style.setProperty("--my", `${event.clientY}px`);
-      },
-      { passive: true }
-    );
+  /* Header + nav --------------------------------------------------------- */
+
+  function setupHeader() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+    const update = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
   }
 
-  function setupParallax() {
-    const atmosphere = document.querySelector(".atmosphere");
-    if (!atmosphere || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function setupMenu() {
+    const burger = document.querySelector(".burger");
+    const nav = document.getElementById("site-nav");
+    if (!burger || !nav) return;
 
-    let ticking = false;
-    const update = () => {
-      atmosphere.style.setProperty("--grid-y", `${window.scrollY * 0.12}px`);
-      ticking = false;
+    const setOpen = (open) => {
+      document.body.classList.toggle("menu-open", open);
+      burger.setAttribute("aria-expanded", String(open));
+      burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     };
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(update);
-      },
-      { passive: true }
-    );
+
+    burger.addEventListener("click", () => setOpen(!document.body.classList.contains("menu-open")));
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+    document.addEventListener("click", (event) => {
+      if (document.body.classList.contains("menu-open") && !event.target.closest(".header")) setOpen(false);
+    });
+    const desktop = window.matchMedia("(min-width: 861px)");
+    const onChange = (e) => e.matches && setOpen(false);
+    if (desktop.addEventListener) desktop.addEventListener("change", onChange);
+    else desktop.addListener(onChange);
   }
 
   function setupScrollSpy() {
     const links = [...document.querySelectorAll(".nav-link")];
-    const targets = links
-      .map((link) => {
-        const id = link.getAttribute("href");
-        return id && id.startsWith("#") ? document.querySelector(id) : null;
-      })
-      .filter(Boolean);
-    if (!targets.length) return;
+    const targets = links.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    if (!targets.length || !("IntersectionObserver" in window)) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -250,95 +279,19 @@ const PORTAL_ORIGIN = "";
           links.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === id));
         });
       },
-      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+      { rootMargin: "-40% 0px -55% 0px" }
     );
     targets.forEach((section) => observer.observe(section));
   }
 
-  function setupHeaderScroll() {
-    const header = document.querySelector(".header");
-    const stage = document.querySelector(".stage");
-    if (!header) return;
-
-    const update = () => {
-      const threshold = stage ? Math.max(24, stage.offsetHeight - header.offsetHeight - 8) : 24;
-      header.classList.toggle("is-solid", window.scrollY > threshold);
-    };
-
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-  }
-
-  function setupMenu() {
-    const burger = document.querySelector(".burger");
-    const nav = document.getElementById("site-nav");
-    const backdrop = document.querySelector(".menu-backdrop");
-    if (!burger || !nav) return;
-
-    const desktop = window.matchMedia("(min-width: 901px)");
-
-    function setOpen(open) {
-      document.body.classList.toggle("menu-open", open);
-      burger.setAttribute("aria-expanded", open ? "true" : "false");
-      burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-      if (backdrop) backdrop.hidden = !open;
-    }
-
-    burger.addEventListener("click", () => {
-      setOpen(!document.body.classList.contains("menu-open"));
-    });
-
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => setOpen(false));
-    });
-
-    if (backdrop) {
-      backdrop.addEventListener("click", () => setOpen(false));
-    }
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") setOpen(false);
-    });
-
-    const onDesktop = () => {
-      if (desktop.matches) setOpen(false);
-    };
-    if (desktop.addEventListener) desktop.addEventListener("change", onDesktop);
-    else desktop.addListener(onDesktop);
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
-    setupPortalLinks();
     setupAnalyticsClicks();
-    setupSignupForms();
-    setupAppear();
-    setupScrollReveal();
-    setupHeaderScroll();
+    setupRepoForm();
+    setupSignupForm();
+    setupVideo();
+    setupReveal();
+    setupHeader();
     setupMenu();
-    setupPointerGlow();
-    setupParallax();
     setupScrollSpy();
-    setupDiagrams();
   });
-
-  function setupDiagrams() {
-    const diagrams = document.querySelectorAll("[data-diagram]");
-    if (!diagrams.length) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      diagrams.forEach((el) => el.classList.add("is-playing"));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle("is-playing", entry.isIntersecting);
-        });
-      },
-      { threshold: 0.35 }
-    );
-    diagrams.forEach((el) => observer.observe(el));
-  }
 })();
