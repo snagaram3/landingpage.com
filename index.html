@@ -6,7 +6,7 @@
   <title>Audit-ready infra from your repo | Alineplane</title>
   <meta name="description" content="Paste a GitHub repo. Get an evidence-backed production plan with Crossplane claims. We onboard and apply with you — keeping desired, actual, and proof in sync.">
   <link rel="canonical" href="https://alineplane.com/">
-  <meta name="strata-portal" content="">
+  <meta name="alineplane-portal" content="">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alineplane">
   <meta property="og:url" content="https://alineplane.com/">
@@ -19,886 +19,563 @@
   <meta name="twitter:title" content="Audit-ready infra from your repo | Alineplane">
   <meta name="twitter:description" content="Paste a GitHub repo. Get an evidence-backed production plan with Crossplane claims. We onboard and apply with you — keeping desired, actual, and proof in sync.">
   <meta name="twitter:image" content="https://alineplane.com/og.png">
-  <meta name="theme-color" content="#0c0a16">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f6b64a'%3E%3Crect x='3' y='5' width='18' height='3' rx='1.2'/%3E%3Crect x='5' y='10.5' width='14' height='3' rx='1.2'/%3E%3Crect x='7' y='16' width='10' height='3' rx='1.2'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0F1A17">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230F1A17'/%3E%3Crect x='4' y='6' width='16' height='2.6' rx='1.3' fill='%23C8693B'/%3E%3Crect x='6' y='10.7' width='12' height='2.6' rx='1.3' fill='%238FB59A'/%3E%3Crect x='8' y='15.4' width='8' height='2.6' rx='1.3' fill='%23F2EDE3'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <style>html, body { background: #0F1A17 !important; color: #F2EDE3; }</style>
   <script>document.documentElement.classList.add("js");</script>
-  <noscript><style>.appear,.reveal{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
 </head>
 <body>
-  <div class="pointer-glow" aria-hidden="true"></div>
-
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="menu-backdrop" data-menu-close hidden></div>
 
   <header class="header">
-    <a href="#top" class="logo appear appear--scale" aria-label="Alineplane" style="--d: 0.08s">
-      <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <rect class="logo-layer" x="3" y="5" width="18" height="3" rx="1.2"></rect>
-        <rect class="logo-layer" x="5" y="10.5" width="14" height="3" rx="1.2"></rect>
-        <rect class="logo-layer" x="7" y="16" width="10" height="3" rx="1.2"></rect>
-      </svg>
-      Alineplane
-    </a>
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Alineplane home">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="3" rx="1.5" fill="#C8693B"></rect>
+          <rect x="5" y="10.5" width="14" height="3" rx="1.5" fill="#8FB59A"></rect>
+          <rect x="7" y="16" width="10" height="3" rx="1.5" fill="#F2EDE3"></rect>
+        </svg>
+        Alineplane
+      </a>
 
-    <nav id="site-nav" class="nav" aria-label="Primary">
-      <a href="#problem" class="nav-link appear appear--soft" style="--d: 0.16s">Problem</a>
-      <a href="#how-it-works" class="nav-link appear appear--soft" style="--d: 0.28s">How it works</a>
-      <a href="#tiers" class="nav-link appear appear--soft" style="--d: 0.40s">Tiers</a>
-      <a href="#fit" class="nav-link appear appear--soft" style="--d: 0.52s">Fit</a>
-      <a href="#compliance" class="nav-link appear appear--soft" style="--d: 0.64s">Evidence</a>
-      <a href="#faq" class="nav-link appear appear--soft" style="--d: 0.70s">FAQ</a>
-    </nav>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#tiers" class="nav-link">Pricing</a>
+        <a href="#compliance" class="nav-link">Evidence</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
 
-    <div class="header-end">
-      <a href="#how-it-works" class="btn btn-solid header-cta appear appear--scale" style="--d: 0.34s" data-portal-path="/analyze" data-event="analyze_click">Analyze repo</a>
-      <button class="burger appear appear--scale" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" style="--d: 0.34s">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-end">
+        <a href="#review" class="btn btn-primary btn-sm" data-event="book_review_click">Book a review</a>
+        <button class="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <div class="stage">
-      <div class="grain" aria-hidden="true"></div>
-      <div class="atmosphere" aria-hidden="true">
-        <div class="atmosphere-grid"></div>
-        <div class="atmosphere-scan"></div>
-        <div class="atmosphere-scan atmosphere-scan--late"></div>
-        <div class="atmosphere-orb atmosphere-orb--a"></div>
-        <div class="atmosphere-orb atmosphere-orb--b"></div>
-        <div class="atmosphere-glow"></div>
-      </div>
+    <!-- Hero -->
     <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="badge appear appear--pop" style="--d: 0.22s">
-          <svg class="badge-star" viewBox="0 0 24 24" width="18" height="20" aria-hidden="true">
-            <path fill="currentColor" d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"></path>
-          </svg>
-          For post-traction teams with 1K+ MAU
-        </p>
+      <div class="container hero-inner">
+        <p class="pill reveal"><span class="pill-dot" aria-hidden="true"></span>For post-traction teams with 1K+ MAU</p>
 
-        <h1 data-ab="hero-headline" data-ab-a="Infrastructure that scales with compliance, not chaos" data-ab-b="Stop building compliance after shipping. Start with it enforced.">
-          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.42s">Infrastructure that scales</span></span>
-          <span class="headline-line"><span class="appear appear--mask" style="--d: 0.62s">with <em>compliance</em>, not chaos.</span></span>
-        </h1>
+        <h1 class="reveal">Infrastructure that scales with <em>compliance</em>, not&nbsp;chaos.</h1>
 
-        <p class="lede appear appear--soft" style="--d: 0.82s">
+        <p class="lede reveal">
           AI made the app cheap. The layer underneath is still expert work.
-          Paste a public GitHub repo. We return an evidence-backed plan with
-          Crossplane claims, then onboard and apply with you — keeping
-          <span class="resilience">desired, actual, and proof</span>
-          in one place.
+          Send us a GitHub repo — we return an evidence-backed plan, then apply it
+          in your cloud with you.
         </p>
 
-        <div class="hero-actions appear appear--btn" style="--d: 0.96s">
-          <a class="btn btn-solid hero-btn" href="#how-it-works" data-portal-path="/analyze" data-event="analyze_click" data-ab="primary-cta" data-ab-a="Analyze your repository" data-ab-b="See your infrastructure plan">Analyze your repository</a>
-          <a class="btn btn-ghost hero-btn" href="#review" data-event="book_review_click">Book a 20-minute review</a>
-        </div>
+        <form class="repo-form reveal" id="repo-form" data-portal-path="/analyze" novalidate>
+          <label class="sr-only" for="hero-repo">Public GitHub repository URL</label>
+          <input id="hero-repo" name="repo" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="github.com/your-org/your-app" required>
+          <button type="submit" class="btn btn-primary" data-event="analyze_click">Get my plan</button>
+        </form>
 
-        <p class="fine-print appear appear--side" style="--d: 1.10s">
-          No signup to see a plan. Resources stay in your cloud.
+        <p class="hero-meta reveal">
+          <span>Nothing is created until you approve.</span>
+          <a href="#demo" class="text-link" data-event="demo_click">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg>
+            Watch the 2-min demo
+          </a>
         </p>
       </div>
-    </section>
 
-    <footer class="stats" aria-label="Three states we maintain">
-      <div class="stat appear appear--stat" style="--d: 1.12s">
-        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="#ede8fb"></rect>
-          <rect x="13.4" y="2.6" width="7.2" height="18.8" rx="3.6" fill="#f6b64a"></rect>
-          <rect x="9.2" y="10.9" width="5.6" height="2.2" rx="1.1" fill="#a9741f"></rect>
-        </svg>
-        <span>Desired — the approved plan</span>
-      </div>
-      <div class="stat appear appear--stat" style="--d: 1.28s">
-        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="6.2" fill="#ede8fb"></rect>
-          <path d="M12 7.1v7.4M8.15 12.35L12 16.2l3.85-3.85" fill="none" stroke="#a9741f" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <span>Actual — what’s running</span>
-      </div>
-      <div class="stat appear appear--stat" style="--d: 1.44s">
-        <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 3l7 3v6c0 5-3.2 8.8-7 11-3.8-2.2-7-6-7-11V6z" fill="#f6b64a" opacity="0.35"></path>
-          <path d="M8.4 12.2l2.4 2.4 5-5.4" fill="none" stroke="#241804" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <span>Proof — load and evidence</span>
-      </div>
-    </footer>
-    </div>
-
-    <section class="video-section" id="demo-video">
+      <!-- Product preview -->
       <div class="container">
-        <div class="section-label">02</div>
-        <h2 class="video-heading reveal">See it in action <span class="video-time">(2 min)</span></h2>
-        <div class="video-window reveal">
-          <div class="window-chrome">
-            <div class="window-dots">
-              <span class="dot dot-close"></span>
-              <span class="dot dot-minimize"></span>
-              <span class="dot dot-maximize"></span>
-            </div>
-            <div class="window-title">demo-recording.mp4</div>
+        <figure class="plan reveal" data-plan aria-label="Example plan for github.com/acme/checkout-api">
+          <div class="plan-bar">
+            <span class="plan-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <code class="plan-url">/analyze · github.com/acme/checkout-api</code>
+            <span class="plan-tag">Example</span>
           </div>
-          <div class="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/TxvaQ2jGvU4?autoplay=1&mute=1&loop=1&playlist=TxvaQ2jGvU4&playsinline=1&controls=1&rel=0&modestbranding=1&origin=https://snagaram3.github.io" 
-              title="Alineplane demo"
-              frameborder="0"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="see-it">
-      <div class="container">
-        <p class="eyebrow reveal">See it in 60 seconds</p>
-        <h2 class="reveal">Repo in. Plan, diagram, and proof out.</h2>
-        <p class="section-lead reveal">
-          Paste a public GitHub repo. We read your code and cite evidence — file and line — 
-          to infer what infrastructure you need. You get a labeled architecture diagram, 
-          an approximate cost estimate, and a reviewable plan. Approve it, and we onboard 
-          and apply it with you. Then watch your dashboard: desired, actual, and proof in one place.
-        </p>
-
-        <figure class="demo-loop reveal" data-diagram data-demo-loop aria-label="Four-step product flow from analysis to live proof">
-          <figcaption class="sr-only">
-            Architecture diagram showing the flow from analyzing a repository to viewing a live dashboard. 
-            Step 1: Paste your repo URL. Step 2: Review file-level evidence (e.g., pg in package.json means PostgreSQL). 
-            Step 3: See your inferred architecture diagram with labeled components and cost estimate. 
-            Step 4: Watch live dashboard with ready resources, response times, and error rates (illustrative).
-          </figcaption>
-          <div class="demo-screen">
-            <div class="demo-chrome">
-              <span></span><span></span><span></span>
-              <code>/analyze</code>
+          <div class="plan-body">
+            <div class="plan-head" aria-hidden="true">
+              <span>Requirement</span><span>Why — evidence in your code</span><span>Status</span>
             </div>
-
-            <div class="demo-frame demo-frame--analyze" data-beat="0">
-              <div class="demo-orb" aria-hidden="true"></div>
-              <p class="demo-kicker">Analyzing repository…</p>
-              <p class="demo-mono">github.com/acme/checkout-api</p>
-            </div>
-
-            <div class="demo-frame demo-frame--evidence" data-beat="1">
-              <p class="demo-kicker">File-level evidence · managed PostgreSQL</p>
-              <button class="demo-evidence" type="button" tabindex="-1">
-                <span>Why this exists</span>
-                <code>package.json:14</code>
-                <p><code>"pg": "^8.11.0"</code> — primary datastore for checkout sessions.</p>
-              </button>
-            </div>
-
-            <div class="demo-frame demo-frame--diagram" data-beat="2">
-              <p class="demo-kicker">Inferred architecture · labeled diagram + cost</p>
-              <svg class="demo-arch" viewBox="0 0 360 140" aria-label="Architecture diagram showing web service connecting to worker, queue, and postgres" role="img">
-                <title>Architecture Diagram</title>
-                <desc>Web service connects to worker and postgres. Worker connects to queue. Queue connects back to worker.</desc>
-                <rect x="16" y="48" width="88" height="44" rx="8" fill="#8f6bf5"/>
-                <text x="60" y="75" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">web</text>
-                <rect x="136" y="20" width="88" height="44" rx="8" fill="#f6b64a"/>
-                <text x="180" y="47" text-anchor="middle" fill="#241804" font-size="13" font-weight="700" font-family="Inter, sans-serif">worker</text>
-                <rect x="136" y="76" width="88" height="44" rx="8" fill="#b19dff"/>
-                <text x="180" y="103" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">queue</text>
-                <rect x="256" y="48" width="88" height="44" rx="8" fill="#ede8fb"/>
-                <text x="300" y="75" text-anchor="middle" fill="#171329" font-size="13" font-weight="700" font-family="Inter, sans-serif">postgres</text>
-                <path d="M104 70h32M180 64v12M224 42h32M224 98h16v-8" fill="none" stroke="#f6b64a" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <p class="demo-cost">Approximate cloud spend · $186 / mo before provision (Azure; AWS/GCP in preview)</p>
-            </div>
-
-            <div class="demo-frame demo-frame--dash" data-beat="3">
-              <p class="demo-kicker">Live dashboard · resources + load (illustrative)</p>
-              <div class="demo-metrics">
-                <div><strong>Ready</strong><span>12 / 12</span></div>
-                <div><strong>p95</strong><span>142 ms</span></div>
-                <div><strong>errors</strong><span>0.04%</span></div>
-              </div>
-              <svg class="demo-chart" viewBox="0 0 360 80" aria-hidden="true">
-                <path class="demo-wave" d="M8 58 C40 58 48 22 80 28 C112 34 120 16 152 20 C184 24 196 48 228 40 C260 32 272 18 304 22 C328 25 340 36 352 30" fill="none" stroke="#f6b64a" stroke-width="2.4"/>
-                <path d="M8 70h344" stroke="#3a3260" stroke-width="1"/>
-              </svg>
-            </div>
-          </div>
-          <ol class="demo-beats">
-            <li>1. Paste repo</li>
-            <li>2. Review evidence</li>
-            <li>3. See diagram + cost</li>
-            <li>4. Watch dashboard</li>
-          </ol>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="problem">
-      <div class="container">
-        <p class="eyebrow reveal">The problem</p>
-        <h2 class="reveal">The app is cheap. Production is still a specialist job.</h2>
-        <p class="section-lead reveal">
-          Teams can ship a product in a week. Database sizing, workers, secrets,
-          migrations, and an answer to “are you audit-ready?” still take months
-          or a platform hire.
-        </p>
-
-        <figure class="diagram" data-diagram>
-          <div class="pain">
-            <div class="pain-card reveal">
-              <svg viewBox="0 0 80 64" aria-hidden="true">
-                <rect x="10" y="26" width="30" height="22" rx="3" fill="#8f6bf5" opacity="0.32"/>
-                <rect class="pain-ticket" x="20" y="18" width="30" height="22" rx="3" fill="#171329" stroke="#b19dff" stroke-width="1.6"/>
-                <path class="pain-ticket" d="M24 25h14M24 30h20M24 35h10" stroke="#b19dff" stroke-width="1.4" stroke-linecap="round" opacity="0.65"/>
-                <rect class="pain-ticket pain-ticket--2" x="30" y="10" width="30" height="22" rx="3" fill="#f6b64a"/>
-                <path class="pain-ticket pain-ticket--2" d="M34 17h14M34 22h20M34 27h10" stroke="#241804" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
-                <circle cx="67" cy="15" r="8" fill="#171329" stroke="#f6b64a" stroke-width="1.6"/>
-                <path d="M64 12l6 6M70 12l-6 6" stroke="#f6b64a" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-              <h3>The managed platform trap</h3>
-              <p>Fast until a customer or auditor asks who changed infrastructure, whether encryption was required, and whether isolation was enforced — not merely available.</p>
-            </div>
-            <div class="pain-card reveal">
-              <svg viewBox="0 0 80 64" aria-hidden="true">
-                <rect x="8" y="10" width="64" height="44" rx="6" fill="#171329" stroke="#3a3260" stroke-width="1.6"/>
-                <path d="M14 46h52" stroke="#3a3260" stroke-width="1.2"/>
-                <path class="pain-crash" d="M16 40l10-8 9 5 12-16 8 5 11-14" fill="none" stroke="#b19dff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle class="pain-break" cx="67" cy="12" r="6" fill="#f6b64a"/>
-                <path d="M67 8v2.4M67 12.6v2M63.4 12h2M68.6 12h2" stroke="#241804" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-              <h3>The DIY / hire trap</h3>
-              <p>Control becomes a second full-time job. A platform engineer is $150k–220k+ loaded, plus months before they are productive. You came to ship the product.</p>
-            </div>
-            <div class="pain-card reveal">
-              <svg viewBox="0 0 80 64" aria-hidden="true">
-                <rect x="38" y="8" width="26" height="48" rx="5" fill="#8f6bf5" stroke="#241c3d" stroke-width="1.6"/>
-                <rect x="43" y="14" width="16" height="3" rx="1.5" fill="#171329" opacity="0.55"/>
-                <rect x="43" y="20" width="16" height="3" rx="1.5" fill="#171329" opacity="0.55"/>
-                <circle cx="46" cy="48" r="2.4" fill="#f6b64a"/>
-                <rect x="10" y="30" width="22" height="26" rx="3" fill="#171329" stroke="#3a3260" stroke-width="1.6"/>
-                <path class="pain-copy" d="M15 37h12M15 42h12M15 47h8" stroke="#b19dff" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-              <h3>What you actually need</h3>
-              <p>Guardrails at creation time. A reviewable plan tied to files in your repo. One live picture of desired vs actual vs proof. Not another black box.</p>
+            <ul class="plan-rows">
+              <li style="--i:0">
+                <strong>Managed PostgreSQL</strong>
+                <span class="ev"><code>package.json:14</code> <q>"pg": "^8.11.0"</q></span>
+                <span class="st st-ok">Ready to provision</span>
+              </li>
+              <li style="--i:1">
+                <strong>Redis cache</strong>
+                <span class="ev"><code>src/cache.ts:8</code> <q>new Redis(process.env.REDIS_URL)</q></span>
+                <span class="st st-ok">Ready to provision</span>
+              </li>
+              <li style="--i:2">
+                <strong>Background worker</strong>
+                <span class="ev"><code>Procfile:2</code> <q>worker: node jobs/index.js</q></span>
+                <span class="st st-ok">Ready to provision</span>
+              </li>
+              <li style="--i:3">
+                <strong>Search index</strong>
+                <span class="ev"><code>package.json:22</code> <q>"@elastic/elasticsearch"</q></span>
+                <span class="st st-gap">Flagged — not yet supported</span>
+              </li>
+            </ul>
+            <div class="plan-foot">
+              <span>Est. <strong>$186 / mo</strong> cloud spend · Azure</span>
+              <span class="plan-approve" aria-hidden="true">Approve plan →</span>
             </div>
           </div>
         </figure>
       </div>
     </section>
 
-    <section class="section" id="states">
+    <!-- Demo video -->
+    <section class="section" id="demo">
       <div class="container">
-        <p class="eyebrow reveal">Live state</p>
-        <h2 class="reveal">Three states we maintain for you</h2>
-        <p class="section-lead reveal">
-          A DevOps hire keeps this in their head, Slack, and scattered repos.
-          We keep it as a product surface — the same place you approved the plan
-          is where you see whether production matches it.
-        </p>
-
-        <figure class="diagram bring-life" data-diagram>
-          <div class="life-board">
-            <div class="life-panel reveal" style="--i: 0">
-              <p class="life-kicker">Desired</p>
-              <pre class="life-preview" aria-hidden="true"><code>plan/
-  postgres  ← src/db.ts:14
-  redis     ← cache.ts:8
-  worker    ← jobs/index.ts</code></pre>
-              <h3>What should exist</h3>
-              <p>The analyzer plan you approved: requirements, file-level reasons, diagram, and cost before spend.</p>
-            </div>
-            <i class="life-join" aria-hidden="true"></i>
-            <div class="life-panel reveal" style="--i: 1">
-              <p class="life-kicker">Actual</p>
-              <pre class="life-preview life-preview--live" aria-hidden="true"><code>PostgreSQL   Ready
-Redis        Ready
-Worker       Ready
-in your account</code></pre>
-              <h3>What is running</h3>
-              <p>Resource status and health in your cloud. You approve once. We watch reconciliation in plain language.</p>
-            </div>
-            <i class="life-join" aria-hidden="true"></i>
-            <div class="life-panel reveal" style="--i: 2">
-              <p class="life-kicker">Proof</p>
-              <pre class="life-preview" aria-hidden="true"><code>load   p95 142ms
-change trail  18
-controls      on</code></pre>
-              <h3>What you can show</h3>
-              <p>Load results plus a change trail. Evidence that guardrails were enforced — for a buyer or an auditor.</p>
-            </div>
-          </div>
-        </figure>
+        <div class="section-head center">
+          <p class="eyebrow reveal">See it in action</p>
+          <h2 class="reveal">Repo in. Plan, diagram, and proof out.</h2>
+        </div>
+        <div class="video reveal">
+          <button class="video-facade" type="button" data-video="TxvaQ2jGvU4" aria-label="Play the 2-minute Alineplane demo" data-event="video_play">
+            <img src="https://i.ytimg.com/vi/TxvaQ2jGvU4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+            <span class="video-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+            </span>
+            <span class="video-len">2 min</span>
+          </button>
+        </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="pillars">
+    <!-- Problem -->
+    <section class="section paper" id="problem">
       <div class="container">
-        <p class="eyebrow reveal">What you buy</p>
-        <h2 class="reveal">Self-serve. Guardrails in. Scale without a rewrite.</h2>
-        <div class="trust-grid">
-          <article class="trust-card reveal">
-            <h3>A plan from the repo, not a catalog form</h3>
-            <p>Point at GitHub. We infer databases, caches, workers, and networking, then generate a reviewable plan with file and line reasons. You focus on shipping. We handle the layer underneath.</p>
+        <div class="section-head">
+          <p class="eyebrow reveal">The problem</p>
+          <h2 class="reveal">The app is cheap. Production is still a specialist job.</h2>
+          <p class="section-lead reveal">
+            Teams ship a product in a week. Database sizing, workers, secrets, migrations —
+            and a credible answer to “are you audit-ready?” — still take months or a platform hire.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <span class="card-num">01</span>
+            <h3>The managed platform trap</h3>
+            <p>Fast, until a customer or auditor asks who changed infrastructure, whether encryption was required, and whether isolation was enforced — not merely available.</p>
           </article>
-          <article class="trust-card reveal">
-            <h3>Compliance built in, not bolted on</h3>
-            <p>Encryption, private networking, and audit logging are on at creation — not optional toggles. Every change is a trail you can hand to an auditor. We do not certify you. Your auditor does.</p>
+          <article class="card reveal">
+            <span class="card-num">02</span>
+            <h3>The DIY / hire trap</h3>
+            <p>Control becomes a second full-time job. A platform engineer costs $150k–220k+ loaded, plus months before they’re productive. You came to ship the product.</p>
           </article>
-          <article class="trust-card reveal">
-            <h3>Start small. Scale on purpose.</h3>
-            <p>Begin with a container and a managed database. Add Kubernetes when traffic demands it. Expand to multi-region when a contract requires it. Same plan. Different topology. No forklift.</p>
+          <article class="card card-accent reveal">
+            <span class="card-num">03</span>
+            <h3>What you actually need</h3>
+            <p>Guardrails at creation time. A reviewable plan tied to files in your repo. One live picture of desired vs actual vs proof. Not another black box.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- How it works -->
     <section class="section" id="how-it-works">
       <div class="container">
-        <p class="eyebrow reveal">How it works</p>
-        <h2 class="reveal">Four steps. Analyze first.</h2>
-        <p class="section-lead reveal">
-          The customer path is the portal you will use: paste, review, approve, watch.
-          Nothing is created until you approve the plan.
-        </p>
-        <figure class="diagram scale-chart" data-diagram>
-          <div class="scale-board">
-            <ol class="scale-flow scale-flow--4">
-              <li class="scale-node" style="--i: 0">
-                <span class="scale-icon">
-                  <svg viewBox="0 0 64 64" aria-hidden="true">
-                    <rect x="10" y="14" width="26" height="32" rx="4" fill="#171329" stroke="#3a3260" stroke-width="1.6"/>
-                    <path d="M16 22h14M16 28h14M16 34h9" stroke="#b19dff" stroke-width="1.8" stroke-linecap="round"/>
-                    <circle cx="40" cy="38" r="11" fill="#f6b64a" opacity="0.16"/>
-                    <circle cx="40" cy="38" r="11" fill="none" stroke="#f6b64a" stroke-width="2.4"/>
-                    <path d="M48 46l7 7" stroke="#f6b64a" stroke-width="2.6" stroke-linecap="round"/>
-                    <path class="scan-arc" d="M32 38h15" fill="none" stroke="#ffd27f" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </span>
-                <strong class="scale-cap">1. Paste the repo</strong>
-                <span class="scale-sub">Public GitHub URL on /analyze</span>
-              </li>
-              <li class="scale-node" style="--i: 1">
-                <span class="scale-icon">
-                  <svg viewBox="0 0 64 64" aria-hidden="true">
-                    <path d="M20 22L34 30M44 22L34 30M20 44L34 34" stroke="#413a66" stroke-width="1.4" stroke-dasharray="2 3"/>
-                    <g class="glyph-db">
-                      <polygon points="12,20 20,16 28,20 20,24" fill="#ffd27f"/>
-                      <polygon points="12,20 20,24 20,32 12,28" fill="#c9903c"/>
-                      <polygon points="20,24 28,20 28,28 20,32" fill="#a9741f"/>
-                    </g>
-                    <g class="glyph-cache">
-                      <polygon points="38,16 46,12 54,16 46,20" fill="#b19dff"/>
-                      <polygon points="38,16 46,20 46,28 38,24" fill="#6a4fc9"/>
-                      <polygon points="46,20 54,16 54,24 46,28" fill="#4c2f99"/>
-                    </g>
-                    <g class="glyph-q">
-                      <polygon points="10,40 18,36 26,40 18,44" fill="#ede8fb"/>
-                      <polygon points="10,40 18,44 18,52 10,48" fill="#a79fc9"/>
-                      <polygon points="18,44 26,40 26,48 18,52" fill="#8a80ad"/>
-                    </g>
-                    <circle cx="50" cy="46" r="6" fill="#171329" stroke="#f6b64a" stroke-width="1.8"/>
-                    <path class="ok-tick" d="M47 46l2.2 2.2 4-4.4" fill="none" stroke="#f6b64a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <strong class="scale-cap">2. Review the plan</strong>
-                <span class="scale-sub">Evidence, diagram, cost</span>
-              </li>
-              <li class="scale-node" style="--i: 2">
-                <span class="scale-icon">
-                  <svg viewBox="0 0 64 64" aria-hidden="true">
-                    <path d="M16 40c-6 0-10-4.6-10-10 0-5 3.6-9 8.4-9.8C16 14 21 10 27 10c6.6 0 12 4.6 13.4 10.8C46 21.6 50 26 50 31c0 5-4 9-9 9z" fill="#8f6bf5"/>
-                    <rect class="cloud-drop" x="20" y="30" width="18" height="15" rx="2.5" fill="#171329" stroke="#ede8fb" stroke-width="1.2"/>
-                    <rect class="cloud-drop" x="23" y="34" width="11" height="2" rx="1" fill="#f6b64a"/>
-                    <rect class="cloud-drop" x="23" y="38" width="11" height="2" rx="1" fill="#b19dff"/>
-                  </svg>
-                </span>
-                <strong class="scale-cap">3. Onboard and apply</strong>
-                <span class="scale-sub">We guide setup with you</span>
-              </li>
-              <li class="scale-node scale-node--ok" style="--i: 3">
-                <span class="scale-icon">
-                  <svg viewBox="0 0 64 64" aria-hidden="true">
-                    <path d="M32 8l18 6v14c0 12-7.6 20.6-18 26-10.4-5.4-18-14-18-26V14z" fill="#f6b64a" opacity="0.16"/>
-                    <path d="M32 8l18 6v14c0 12-7.6 20.6-18 26-10.4-5.4-18-14-18-26V14z" fill="none" stroke="#f6b64a" stroke-width="2"/>
-                    <path class="ok-tick" d="M22 32l7 7 14-16" fill="none" stroke="#ffd27f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <strong class="scale-cap">4. Watch the dashboard</strong>
-                <span class="scale-sub">Live resources + load proof</span>
-              </li>
-            </ol>
-          </div>
-        </figure>
+        <div class="section-head">
+          <p class="eyebrow reveal">How it works</p>
+          <h2 class="reveal">Four steps. Analyze first.</h2>
+          <p class="section-lead reveal">Paste, review, approve, watch. Nothing is created until you approve the plan.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Paste the repo</h3>
+            <p>Any public GitHub URL. We read JavaScript, TypeScript, and Python today.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Review the plan</h3>
+            <p>Every requirement cites a file and line, plus an architecture diagram and a cost estimate.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Onboard and apply</h3>
+            <p>You grant a scoped role. We apply the approved plan in your account, with you.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">4</span>
+            <h3>Watch the dashboard</h3>
+            <p>Live resource status, load results, and a change trail — in one place.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section section-alt" id="account">
+    <!-- Three states -->
+    <section class="section" id="states">
       <div class="container">
-        <p class="eyebrow reveal">Your cloud</p>
-        <h2 class="reveal">Your resources live in your account.</h2>
-        <p class="section-lead reveal">
-          We don’t ask you to learn our control plane. You get outcomes and evidence.
-          Azure first; AWS and GCP in preview. Resources run on your bill. You grant a scoped
-          role only after you approve a plan.
-        </p>
-
-        <figure class="diagram" data-diagram>
-          <div class="ownership">
-            <div class="ownership-card reveal">
-              <svg class="own-figure" viewBox="0 0 160 90" aria-hidden="true">
-                <path d="M30 66c-11 0-19-8-19-18 0-9 6.5-16.4 15-17.7C28 20 37 12 49 12c12 0 22 8 24.6 19C83 32 90 39 90 48c0 10-8.6 18-19 18z" fill="#8f6bf5" opacity="0.22"/>
-                <path d="M30 66c-11 0-19-8-19-18 0-9 6.5-16.4 15-17.7C28 20 37 12 49 12c12 0 22 8 24.6 19C83 32 90 39 90 48c0 10-8.6 18-19 18z" fill="none" stroke="#8f6bf5" stroke-width="1.6"/>
-                <ellipse cx="34" cy="38" rx="9" ry="4" fill="#ffd27f"/>
-                <path d="M25 38v12c0 2.2 4 4 9 4s9-1.8 9-4V38" fill="#c9903c"/>
-                <ellipse cx="34" cy="38" rx="9" ry="4" fill="#ffd27f"/>
-                <rect x="48" y="44" width="16" height="14" rx="2.5" fill="#b19dff"/>
-                <rect x="51" y="48" width="10" height="2" rx="1" fill="#241c3d" opacity="0.4"/>
-                <rect x="51" y="52" width="6" height="2" rx="1" fill="#241c3d" opacity="0.4"/>
-                <rect x="68" y="36" width="15" height="15" rx="3" fill="#f6b64a"/>
-                <path d="M72 43h7M75.5 39.5v7" stroke="#241804" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-              <p class="own-label">Yours</p>
-              <h3>Your cloud account</h3>
-              <p>Compute, data, and caches stay inside your cloud account, under your billing. Azure first; AWS and GCP in preview. If you leave, they stay.</p>
-              <ul class="own-res-list">
-                <li class="own-res own-res--db"><span>Database</span></li>
-                <li class="own-res own-res--box"><span>Compute</span></li>
-                <li class="own-res own-res--cache"><span>Cache</span></li>
-              </ul>
-            </div>
-            <div class="ownership-card reveal">
-              <svg class="own-figure" viewBox="0 0 160 90" aria-hidden="true">
-                <rect x="20" y="24" width="90" height="42" rx="8" fill="#171329" stroke="#3a3260" stroke-width="1.6"/>
-                <circle cx="38" cy="45" r="8" fill="none" stroke="#f6b64a" stroke-width="2.2"/>
-                <circle cx="38" cy="45" r="2.4" fill="#f6b64a"/>
-                <circle cx="65" cy="45" r="8" fill="none" stroke="#b19dff" stroke-width="2.2"/>
-                <path d="M65 40v5l4 3" stroke="#b19dff" stroke-width="2" stroke-linecap="round" fill="none"/>
-                <rect x="84" y="38" width="16" height="14" rx="2.5" fill="#ffd27f"/>
-                <path d="M88 45h8" stroke="#241804" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-              <p class="own-label">What you see</p>
-              <h3>Outcomes and evidence</h3>
-              <p>A plan, live status, and proof. Guided onboarding and infrastructure managed in your account. Not a second console to learn.</p>
-            </div>
-          </div>
-        </figure>
-
-        <p class="model-note reveal">
-          You pay your cloud provider for what you use. You pay Alineplane to plan,
-          stand it up, and keep desired / actual / proof in sync — a fraction of one FTE.
-        </p>
-
-        <div class="trust-grid">
-          <article class="trust-card reveal">
-            <h3>The role we need</h3>
-            <p>A scoped role that can create and manage the services in the approved plan. We do not become the account owner. We do not need your application data or your users&rsquo; data.</p>
+        <div class="section-head">
+          <p class="eyebrow reveal">Live state</p>
+          <h2 class="reveal">Three states, kept in sync for you.</h2>
+          <p class="section-lead reveal">
+            A DevOps hire keeps this in their head, Slack, and scattered repos. We keep it as one surface —
+            the place you approved the plan is where you see whether production matches it.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card state reveal">
+            <p class="state-label">Desired</p>
+            <pre class="snippet" aria-hidden="true"><code>postgres  <span>← src/db.ts:14</span>
+redis     <span>← cache.ts:8</span>
+worker    <span>← jobs/index.ts</span></code></pre>
+            <h3>What should exist</h3>
+            <p>The plan you approved: requirements, file-level reasons, diagram, and cost before spend.</p>
           </article>
-          <article class="trust-card reveal">
-            <h3>What “we infer” means</h3>
-            <p>If <code>package.json</code> depends on <code>pg</code>, the plan says PostgreSQL and cites the file that caused it. If we cannot provision something yet, the plan says so. Nothing is created until you approve.</p>
+          <article class="card state reveal">
+            <p class="state-label">Actual</p>
+            <pre class="snippet" aria-hidden="true"><code>PostgreSQL  <span class="ok">● Ready</span>
+Redis       <span class="ok">● Ready</span>
+Worker      <span class="ok">● Ready</span></code></pre>
+            <h3>What is running</h3>
+            <p>Resource status and health in your own cloud account, explained in plain language.</p>
           </article>
-          <article class="trust-card reveal">
-            <h3>If you leave</h3>
-            <p>The infra stays in your account, on your bill. You can keep running it without us. We do not hold your data hostage.</p>
+          <article class="card state reveal">
+            <p class="state-label">Proof</p>
+            <pre class="snippet" aria-hidden="true"><code>load p95      <span>142 ms</span>
+change trail  <span>18 entries</span>
+guardrails    <span class="ok">enforced</span></code></pre>
+            <h3>What you can show</h3>
+            <p>Load results plus a change trail — evidence that guardrails were enforced, for a buyer or an auditor.</p>
           </article>
         </div>
-
-        <aside class="trust-note reveal">
-          <p><strong>What we read today.</strong> JavaScript, TypeScript, and Python. Other languages get a thin plan rather than a guessed one.</p>
-          <p><strong>Where it lands.</strong> Azure first; AWS and GCP in preview. Connecting the cloud is a later step, after the plan.</p>
-        </aside>
       </div>
     </section>
 
-    <section class="section" id="tiers">
-      <div class="container">
-        <p class="eyebrow reveal">Tiers</p>
-        <h2 class="reveal">A fraction of one platform hire.</h2>
-        <p class="section-lead reveal">
-          Move between tiers without throwing away the plan. Cloud spend is billed
-          by your provider. Alineplane starts at $500 / month.
-        </p>
+    <!-- Your cloud -->
+    <section class="section" id="account">
+      <div class="container split">
+        <div class="section-head">
+          <p class="eyebrow reveal">Your cloud</p>
+          <h2 class="reveal">Your resources live in your account.</h2>
+          <p class="section-lead reveal">
+            Compute, data, and caches run in your cloud, on your bill. You get outcomes and evidence —
+            not a second console to learn. Azure first; AWS and GCP in preview.
+          </p>
+          <p class="note reveal">
+            <strong>You pay your cloud provider</strong> for what you use. You pay Alineplane to plan,
+            stand it up, and keep it in sync — a fraction of one FTE.
+          </p>
+        </div>
+        <dl class="facts">
+          <div class="fact reveal">
+            <dt>The role we need</dt>
+            <dd>A scoped role that can manage only the services in your approved plan. We never become the account owner, and we don’t need your application or user data.</dd>
+          </div>
+          <div class="fact reveal">
+            <dt>What “we infer” means</dt>
+            <dd>If <code>package.json</code> depends on <code>pg</code>, the plan says PostgreSQL and cites that file. If we can’t provision something yet, the plan says so.</dd>
+          </div>
+          <div class="fact reveal">
+            <dt>If you leave</dt>
+            <dd>The infrastructure stays in your account, on your bill. Keep running it without us. We don’t hold your data hostage.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-        <div class="tier-table-wrap reveal">
-          <table class="tier-table">
-            <caption class="sr-only">Alineplane tier comparison</caption>
-            <thead>
-              <tr>
-                <th scope="col"> </th>
-                <th scope="col">Lightweight</th>
-                <th scope="col" class="is-featured">Standard</th>
-                <th scope="col">Enterprise</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Who it’s for</th>
-                <td>1K–10K monthly active users</td>
-                <td>10K–100K MAU</td>
-                <td>100K+ MAU or strict mandates</td>
-              </tr>
-              <tr>
-                <th scope="row">Infrastructure</th>
-                <td>Container + managed Postgres + DNS</td>
-                <td>Managed Kubernetes + multi-service + private network</td>
-                <td>Multi-region + geo-replicated data + dedicated egress</td>
-              </tr>
-              <tr>
-                <th scope="row">Compliance posture</th>
-                <td>Basic audit readiness: encryption at rest, logs, change tracking</td>
-                <td>SOC 2-ready guardrails enforced + quarterly evidence packages</td>
-                <td>HIPAA / PCI-DSS control enforcement + BAA support + advisory</td>
-              </tr>
-              <tr>
-                <th scope="row">Uptime</th>
-                <td>99.5% best effort</td>
-                <td>99.9% with incident response</td>
-                <td>99.95% with 24/7 support + DR runbooks</td>
-              </tr>
-              <tr>
-                <th scope="row">Monthly starting price</th>
-                <td><strong>$500</strong></td>
-                <td><strong>$2,500</strong></td>
-                <td><strong>Custom</strong> (starts $10K+)</td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Pricing -->
+    <section class="section paper" id="tiers">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow reveal">Pricing</p>
+          <h2 class="reveal">A fraction of one platform hire.</h2>
+          <p class="section-lead reveal">
+            Start small, scale on purpose. Move between tiers without rewriting the plan.
+            Cloud spend is billed separately by your provider.
+          </p>
         </div>
 
-        <div class="tiers-grid">
-          <article class="tier-card reveal">
+        <div class="tiers">
+          <article class="tier reveal">
             <h3 class="tier-name">Lightweight</h3>
+            <p class="tier-for">1K–10K monthly active users</p>
             <p class="tier-price">$500<span>/mo</span></p>
             <p class="tier-desc">Audit-ready from day one, without Kubernetes complexity.</p>
-            <ul class="tier-features">
-              <li>1K–10K MAU, single-service apps</li>
-              <li>Container + managed database + DNS</li>
-              <li>Encryption, logs, and change tracking on</li>
-              <li>Best for first compliance questions</li>
+            <ul class="ticks">
+              <li>Container + managed Postgres + DNS</li>
+              <li>Encryption at rest, logs, change tracking</li>
+              <li>99.5% best-effort uptime</li>
             </ul>
-            <a class="btn btn-solid btn-block tier-cta" href="#how-it-works" data-portal-path="/analyze" data-event="tier1_cta">Get started — $500/month</a>
+            <a class="btn btn-secondary btn-block" href="#review" data-event="tier1_cta">Get started</a>
           </article>
-          <article class="tier-card tier-card--highlight reveal">
+
+          <article class="tier tier-featured reveal">
+            <p class="tier-badge">Most teams</p>
             <h3 class="tier-name">Standard</h3>
+            <p class="tier-for">10K–100K monthly active users</p>
             <p class="tier-price">$2,500<span>/mo</span></p>
             <p class="tier-desc">SOC 2-ready infrastructure with enforced private networking.</p>
-            <ul class="tier-features">
-              <li>10K–100K MAU, multi-service</li>
+            <ul class="ticks">
+              <li>Managed Kubernetes, multi-service</li>
               <li>Private network + enforced guardrails</li>
               <li>Quarterly evidence packages</li>
-              <li>99.9% with incident response</li>
+              <li>99.9% uptime with incident response</li>
             </ul>
-            <a class="btn btn-solid btn-block tier-cta" href="#review" data-event="book_review_click">Schedule SOC 2 readiness review</a>
+            <a class="btn btn-primary btn-block" href="#review" data-event="book_review_click">Schedule a SOC 2 readiness review</a>
           </article>
-          <article class="tier-card reveal">
+
+          <article class="tier reveal">
             <h3 class="tier-name">Enterprise</h3>
+            <p class="tier-for">100K+ MAU or strict mandates</p>
             <p class="tier-price">$10K+<span>/mo</span></p>
             <p class="tier-desc">Enterprise compliance controls with dedicated advisory.</p>
-            <ul class="tier-features">
-              <li>100K+ MAU or contract-driven controls</li>
+            <ul class="ticks">
               <li>Multi-region + geo-replicated data</li>
               <li>HIPAA / PCI-DSS control enforcement</li>
-              <li>BAA support and 24/7 coverage</li>
+              <li>BAA support, 24/7 coverage, DR runbooks</li>
+              <li>99.95% uptime</li>
             </ul>
-            <a class="btn btn-ghost btn-block tier-cta" href="#review" data-event="book_review_click">Talk to compliance engineering</a>
+            <a class="btn btn-secondary btn-block" href="#review" data-event="book_review_click">Talk to us</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="fit">
+    <!-- Fit -->
+    <section class="section" id="fit">
       <div class="container">
-        <p class="eyebrow reveal">Who this is for</p>
-        <h2 class="reveal">Built for teams with users, revenue, and pressure.</h2>
-        <p class="section-lead reveal">
-          We optimize for post-traction teams. If that’s not you yet, stay on a
-          managed host until compliance or scale is real.
-        </p>
-
-        <div class="fit-grid">
-          <article class="fit-card fit-card--yes reveal">
-            <h3>This is for you if</h3>
-            <ul>
+        <div class="section-head">
+          <p class="eyebrow reveal">Who this is for</p>
+          <h2 class="reveal">Built for teams with users, revenue, and pressure.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>A good fit if</h3>
+            <ul class="ticks">
               <li>You have 1,000+ monthly active users in production</li>
-              <li>A customer, investor, or buyer asked whether you are SOC 2 ready — and you need a credible answer</li>
-              <li>You want to ship features, not spend months becoming infrastructure specialists</li>
-              <li>You will pay for infrastructure that is audit-ready by default</li>
+              <li>A customer, investor, or buyer asked if you’re SOC 2 ready — and you need a credible answer</li>
+              <li>You want to ship features, not become infrastructure specialists</li>
             </ul>
           </article>
-          <article class="fit-card fit-card--no reveal">
-            <h3>This is not for you if</h3>
-            <ul>
-              <li>You are pre-launch or still finding product-market fit — use Vercel, Railway, or Render</li>
+          <article class="card reveal">
+            <h3>Not a fit if</h3>
+            <ul class="crosses">
+              <li>You’re pre-launch or still finding product-market fit — use Vercel, Railway, or Render</li>
               <li>You want the cheapest possible hosting</li>
-              <li>You already have a platform team and want to own every file</li>
-              <li>You need a vendor to certify you. Auditors certify customers. We provide evidence.</li>
+              <li>You already have a platform team that wants to own every file</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Build vs buy -->
     <section class="section" id="build">
       <div class="container">
-        <p class="eyebrow reveal">Build vs buy</p>
-        <h2 class="reveal">Hire when you must. Don’t buy a second product first.</h2>
-        <p class="section-lead reveal">
-          At enough scale, platform engineering pays off. Before that, you are
-          paying a full salary for build, operate, and audit prep. We cover operate
-          and evidence from day one, at a fraction of one FTE.
-        </p>
-
-        <div class="tier-table-wrap reveal">
-          <table class="tier-table buy-table">
+        <div class="section-head">
+          <p class="eyebrow reveal">Build vs buy</p>
+          <h2 class="reveal">Hire when you must. Not before.</h2>
+          <p class="section-lead reveal">
+            At enough scale, platform engineering pays off. Before that, you’re paying a full salary
+            for build, operate, and audit prep.
+          </p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="compare">
             <caption class="sr-only">Hiring platform engineering versus Alineplane</caption>
             <thead>
               <tr>
-                <th scope="col"> </th>
+                <td></td>
                 <th scope="col">Hire platform / DevOps</th>
-                <th scope="col" class="is-featured">Alineplane</th>
+                <th scope="col" class="is-us">Alineplane</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">Time to audit-credible prod</th>
-                <td>Often 3–9 months</td>
-                <td>Guided onboarding: plan → apply with you → dashboard</td>
+                <td data-label="Hire platform / DevOps">Often 3–9 months</td>
+                <td class="is-us" data-label="Alineplane">Guided: plan → apply with you → dashboard</td>
               </tr>
               <tr>
                 <th scope="row">Ongoing cost</th>
-                <td>$150k–220k+ loaded, plus tools and on-call</td>
-                <td>$500–$2,500 / mo for most teams; Enterprise when contracts demand it</td>
+                <td data-label="Hire platform / DevOps">$150k–220k+ loaded, plus tools and on-call</td>
+                <td class="is-us" data-label="Alineplane">$500–$2,500 / mo for most teams</td>
               </tr>
               <tr>
                 <th scope="row">Bus factor</th>
-                <td>One person’s runbooks</td>
-                <td>Productized operations</td>
+                <td data-label="Hire platform / DevOps">One person’s runbooks</td>
+                <td class="is-us" data-label="Alineplane">Productized operations</td>
               </tr>
               <tr>
                 <th scope="row">Growth path</th>
-                <td>Re-architect or hire more</td>
-                <td>Tier upgrades without rewriting the plan</td>
+                <td data-label="Hire platform / DevOps">Re-architect or hire more</td>
+                <td class="is-us" data-label="Alineplane">Tier upgrades, same plan</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="model-note reveal">No ROI spreadsheet. Those are the published anchors. Cloud usage is extra, on your bill.</p>
       </div>
     </section>
 
-    <section class="section section-alt" id="compliance">
+    <!-- Evidence -->
+    <section class="section paper" id="compliance">
       <div class="container">
-        <p class="eyebrow reveal">Evidence</p>
-        <h2 class="reveal">We provide evidence. Your auditor certifies you.</h2>
-        <p class="section-lead reveal">
-          Guardrails are enforced at creation. You bring the trail to your auditor.
-          We never promise a certification date.
-        </p>
-
-        <div class="compliance-grid">
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M32 8l18 6v14c0 12-7.6 20.6-18 26-10.4-5.4-18-14-18-26V14z" fill="#f6b64a" opacity="0.16"/>
-              <path d="M32 8l18 6v14c0 12-7.6 20.6-18 26-10.4-5.4-18-14-18-26V14z" fill="none" stroke="#f6b64a" stroke-width="2"/>
-              <path d="M22 32l7 7 14-16" fill="none" stroke="#ffd27f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class="section-head">
+          <p class="eyebrow reveal">Evidence</p>
+          <h2 class="reveal">We provide evidence. Your auditor certifies you.</h2>
+          <p class="section-lead reveal">Guardrails are enforced when resources are created. You bring the trail to your auditor. We never promise a certification date.</p>
+        </div>
+        <div class="grid-4">
+          <article class="mini reveal">
             <h3>Enforced at creation</h3>
-            <p>Encryption at rest, private networking, and audit logging are required when the resource is created — not left as optional toggles.</p>
+            <p>Encryption at rest, private networking, and audit logging are required — not optional toggles.</p>
           </article>
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="14" y="18" width="36" height="28" rx="4" fill="#171329" stroke="#b19dff" stroke-width="2"/>
-              <path d="M22 28h20M22 34h20M22 40h14" stroke="#b19dff" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <article class="mini reveal">
             <h3>Change trail</h3>
-            <p>Every approved plan and infrastructure change is recorded. You can show who approved what, and when it landed.</p>
+            <p>Every approved plan and infrastructure change is recorded: who approved what, and when it landed.</p>
           </article>
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="12" y="20" width="40" height="28" rx="4" fill="#8f6bf5" opacity="0.16"/>
-              <rect x="12" y="20" width="40" height="28" rx="4" fill="none" stroke="#8f6bf5" stroke-width="2"/>
-              <circle cx="32" cy="34" r="6" fill="none" stroke="#b19dff" stroke-width="2"/>
-              <path d="M32 40v4" stroke="#b19dff" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <article class="mini reveal">
             <h3>Control mappings</h3>
-            <p>We document which infrastructure controls map to common SOC 2, HIPAA, and PCI-DSS requirements so your auditor is not starting from a blank page.</p>
+            <p>Infrastructure controls mapped to common SOC 2, HIPAA, and PCI-DSS requirements.</p>
           </article>
-          <article class="compliance-card reveal">
-            <svg class="compliance-icon" viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="12" y="16" width="40" height="32" rx="4" fill="#171329" stroke="#f6b64a" stroke-width="2"/>
-              <path d="M20 28h24M20 36h18" stroke="#f6b64a" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <article class="mini reveal">
             <h3>Evidence packages</h3>
-            <p>Standard and Enterprise include packaged evidence — change history, control narrative, and load proof — on a cadence that matches the tier.</p>
+            <p>Standard and Enterprise include change history, control narrative, and load proof on a set cadence.</p>
           </article>
         </div>
-
-        <aside class="compliance-note reveal">
-          <p><strong>Compliance honesty.</strong> We provide enforced infrastructure controls and audit-ready evidence. Your auditor certifies you. We do not sell a certification date.</p>
-        </aside>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section" id="faq">
-      <div class="container">
-        <p class="eyebrow reveal">FAQ</p>
-        <h2 class="reveal">Questions teams ask before they paste a repo.</h2>
-        <div class="faq-list">
-          <h3 class="faq-group">Getting started</h3>
-            <details class="faq-item reveal">
-              <summary>What is Alineplane?</summary>
-              <p>Alineplane turns your GitHub repo into audit-ready production infrastructure. Paste a repo, review an evidence-backed plan with Crossplane claims, then we onboard and apply with you, keeping desired, actual and proof in sync.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Who is Alineplane for?</summary>
-              <p>Post-traction teams with 1,000+ monthly active users, especially if a customer, investor or buyer has asked whether you're SOC 2 ready. If you're pre-launch or still finding product-market fit, a managed host like Vercel, Railway or Render is a better fit for now.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Do I need to sign up to see a plan?</summary>
-              <p>No. Paste a public GitHub repo and you'll get a plan with no signup. You can also book a 20-minute infrastructure review.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Which languages do you support?</summary>
-              <p>Today we read JavaScript, TypeScript and Python. Other languages get a thin plan rather than a guessed one.</p>
-            </details>
-          <h3 class="faq-group">How it works</h3>
-            <details class="faq-item reveal">
-              <summary>What happens after I paste my repo?</summary>
-              <p>Four steps: paste the repo, review the plan (evidence, diagram, cost), onboard and apply the infrastructure with you, then watch live resources and load proof on your dashboard.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>How do you decide what infrastructure I need?</summary>
-              <p>We infer it from your code and cite the file that caused it. For example, if package.json depends on pg, the plan says PostgreSQL and points to that file. If we can't provision something yet, the plan says so.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Will anything be created without my approval?</summary>
-              <p>No. Nothing is created until you approve the plan.</p>
-            </details>
-          <h3 class="faq-group">Security and access</h3>
-            <details class="faq-item reveal">
-              <summary>What access do you need to my cloud account?</summary>
-              <p>A scoped role that can create and manage the services in your approved plan, granted only after you approve. We don't become the account owner. Under the hood, access uses a federated trust chain (AWS role assumption, Azure managed identity, GCP service-account impersonation); we don't create or store long-lived static credentials for your account.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Do you access my application or user data?</summary>
-              <p>No. We don't need your application data or your users' data.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Are my environments kept separate from other customers?</summary>
-              <p>Yes. Each client is onboarded with its own provider configuration and credentials scoped to its own cloud account.</p>
-            </details>
-          <h3 class="faq-group">Clouds supported</h3>
-            <details class="faq-item reveal">
-              <summary>Which clouds do you support?</summary>
-              <p>Azure first; AWS and GCP in preview. Your infrastructure runs in your own account, on your bill. You tell us which cloud; connecting it is a step after the plan.</p>
-            </details>
-          <h3 class="faq-group">Pricing and tiers</h3>
-            <details class="faq-item reveal">
-              <summary>How much does Alineplane cost?</summary>
-              <p>Lightweight starts at $500/month (1K–10K MAU), Standard at $2,500/month (10K–100K MAU), and Enterprise is custom, starting at $10K+/month (100K+ MAU or strict mandates).</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Is cloud spend included?</summary>
-              <p>No. You pay your cloud provider directly for what you use. You pay Alineplane to plan, stand it up and keep it in sync.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Can I change tiers later?</summary>
-              <p>Yes. You can move between tiers without throwing away your plan.</p>
-            </details>
-          <h3 class="faq-group">Support and scaling</h3>
-            <details class="faq-item reveal">
-              <summary>What uptime and support do I get?</summary>
-              <p>Lightweight: 99.5% best effort. Standard: 99.9% with incident response. Enterprise: 99.95% with 24/7 support and DR runbooks.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary>Will Strata make me SOC 2 / HIPAA / PCI compliant?</summary>
-              <p>We provide enforced infrastructure controls (encryption at rest, private networking, audit logging at creation), a change trail, control mappings, and — on Standard and Enterprise — packaged evidence. Your auditor certifies you; we never promise a certification date.</p>
-            </details>
-          <h3 class="faq-group">Data and offboarding</h3>
-            <details class="faq-item reveal">
-              <summary>What happens if I leave?</summary>
-              <p>Your infrastructure stays in your account, on your bill, and you can keep running it without us. We don't hold your data hostage.</p>
-            </details>
+      <div class="container split">
+        <div class="section-head">
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 class="reveal">Questions teams ask before they send a repo.</h2>
+          <p class="section-lead reveal">Something else? <a class="text-link" href="#review">Book a 20-minute review</a> and ask us directly.</p>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>What is Alineplane?</summary>
+            <p>Alineplane turns your GitHub repo into audit-ready production infrastructure. You review an evidence-backed plan with Crossplane claims, then we onboard and apply it with you, keeping desired, actual, and proof in sync.</p>
+          </details>
+          <details class="reveal">
+            <summary>How do you decide what infrastructure I need?</summary>
+            <p>We infer it from your code and cite the file that caused it. If <code>package.json</code> depends on <code>pg</code>, the plan says PostgreSQL and points to that line. If we can’t provision something yet, the plan says so instead of guessing.</p>
+          </details>
+          <details class="reveal">
+            <summary>Which languages do you support?</summary>
+            <p>JavaScript, TypeScript, and Python today. Other languages get a thin plan rather than a guessed one.</p>
+          </details>
+          <details class="reveal">
+            <summary>Will anything be created without my approval?</summary>
+            <p>No. Nothing is created until you approve the plan.</p>
+          </details>
+          <details class="reveal">
+            <summary>What access do you need to my cloud account?</summary>
+            <p>A scoped role that can create and manage only the services in your approved plan, granted after you approve. Access uses a federated trust chain (AWS role assumption, Azure managed identity, GCP service-account impersonation) — we never create or store long-lived static credentials for your account.</p>
+          </details>
+          <details class="reveal">
+            <summary>Do you access my application or user data?</summary>
+            <p>No. We don’t need your application data or your users’ data.</p>
+          </details>
+          <details class="reveal">
+            <summary>Are my environments kept separate from other customers?</summary>
+            <p>Yes. Each client is onboarded with its own provider configuration, scoped to its own cloud account.</p>
+          </details>
+          <details class="reveal">
+            <summary>Which clouds do you support?</summary>
+            <p>Azure first; AWS and GCP in preview. Everything runs in your own account, on your bill.</p>
+          </details>
+          <details class="reveal">
+            <summary>Is cloud spend included in the price?</summary>
+            <p>No. You pay your cloud provider directly for what you use, and you can move between tiers at any time without throwing away your plan.</p>
+          </details>
+          <details class="reveal">
+            <summary>Will Alineplane make me SOC 2 / HIPAA / PCI compliant?</summary>
+            <p>We provide enforced infrastructure controls, a change trail, control mappings, and — on Standard and Enterprise — packaged evidence. Your auditor certifies you; we never promise a certification date.</p>
+          </details>
+          <details class="reveal">
+            <summary>What happens if I leave?</summary>
+            <p>Your infrastructure stays in your account, on your bill, and you can keep running it without us.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section signup-section" id="review">
-      <div class="container signup-inner">
-        <p class="eyebrow reveal">Next step</p>
-        <h2 class="reveal">Book a 20-minute infrastructure review</h2>
-        <p class="reveal">Send the repo. We’ll map it to a tier and show what audit-ready evidence looks like. Or paste it yourself — no signup required.</p>
-
-        <div class="review-actions reveal">
-          <a class="btn btn-ghost hero-btn" href="#how-it-works" data-portal-path="/analyze" data-event="analyze_click">Analyze your repository</a>
+    <!-- Review form -->
+    <section class="section section-cta" id="review">
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <p class="eyebrow reveal">Next step</p>
+          <h2 class="reveal">Book a 20-minute infrastructure review.</h2>
+          <p class="section-lead reveal">Send the repo. We’ll map it to a tier, reply with a first-pass plan, and show you what audit-ready evidence looks like.</p>
+          <ul class="ticks reveal">
+            <li>Free, no commitment</li>
+            <li>Plan with file-level evidence</li>
+            <li>Nothing created without approval</li>
+          </ul>
         </div>
 
-        <form id="signup-form" class="signup-form reveal" novalidate>
-          <div class="form-row">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Work email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
-          </div>
-          <div class="form-row">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" autocomplete="organization" required placeholder="Company name">
-          </div>
-          <div class="form-row">
-            <label for="repo">Public GitHub repo <span class="optional">(optional)</span></label>
-            <input type="url" id="repo" name="repo" inputmode="url" placeholder="https://github.com/org/app" autocomplete="off">
-          </div>
-          <div class="hp" aria-hidden="true">
-            <label for="website">Website</label>
-            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          </div>
-          <div class="form-row">
-            <label for="cloud">Cloud provider</label>
-            <select id="cloud" name="cloud">
-              <option value="aws">AWS</option>
-              <option value="gcp">Google Cloud</option>
-              <option value="azure">Azure</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-solid btn-block hero-btn">Book the review</button>
-        </form>
-        <p id="signup-success" class="signup-success" role="status" hidden>
-          Thanks. We’ll reply with a time and, if you sent a repo, a first-pass plan.
-        </p>
+        <div class="form-card reveal">
+          <form id="signup-form" class="signup-form" novalidate>
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Work email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-row">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" autocomplete="organization" required>
+            </div>
+            <div class="form-row">
+              <label for="repo">Public GitHub repo <span class="optional">(optional)</span></label>
+              <input type="url" id="repo" name="repo" inputmode="url" placeholder="https://github.com/org/app" autocomplete="off" spellcheck="false">
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-row">
+              <label for="cloud">Cloud provider</label>
+              <select id="cloud" name="cloud">
+                <option value="azure" selected>Azure</option>
+                <option value="aws">AWS (preview)</option>
+                <option value="gcp">Google Cloud (preview)</option>
+                <option value="other">Other / not sure</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Book the review</button>
+          </form>
+          <p id="signup-success" class="signup-success" role="status" hidden>
+            Thanks — we’ll reply with a time and, if you sent a repo, a first-pass plan.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
-      <span class="logo">
-        <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <rect x="3" y="5" width="18" height="3" rx="1.2"></rect>
-          <rect x="5" y="10.5" width="14" height="3" rx="1.2"></rect>
-          <rect x="7" y="16" width="10" height="3" rx="1.2"></rect>
+      <a href="#top" class="logo" aria-label="Alineplane home">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="3" rx="1.5" fill="#C8693B"></rect>
+          <rect x="5" y="10.5" width="14" height="3" rx="1.5" fill="#8FB59A"></rect>
+          <rect x="7" y="16" width="10" height="3" rx="1.5" fill="#F2EDE3"></rect>
         </svg>
         Alineplane
-      </span>
-      <p class="footer-disclaimer">
-        &copy; 2026 Alineplane. We provide enforced controls and audit-ready evidence.
-        Your auditor certifies you. Cloud usage is billed by your provider.
-      </p>
+      </a>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#tiers">Tiers</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#tiers">Pricing</a>
         <a href="#compliance">Evidence</a>
-        <a href="#account">Your cloud</a>
         <a href="#review">Book a review</a>
       </nav>
+      <p class="footer-note">© 2026 Alineplane. We provide enforced controls and audit-ready evidence; your auditor certifies you. Cloud usage is billed by your provider.</p>
     </div>
   </footer>
 
